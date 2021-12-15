@@ -1853,7 +1853,7 @@ fieldset:disabled a.btn {
     border-color: #E41A86; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #b3959a;
+    background-color: #E41A86;
     border-color: #E41A86;
     box-shadow: 0 0 0 0.2rem rgba(253, 77, 111, 0.5); }
   .btn-primary.disabled, .btn-primary:disabled {
