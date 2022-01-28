@@ -349,6 +349,19 @@ h6, .h6 {
   font-weight: 600;
   line-height: 1.2; }
 
+.display-4-gr {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  background: linear-gradient(to right, #4285F4, #E41A86);
+  background-size: 100%;
+  background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  }
+
 hr {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
