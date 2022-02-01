@@ -32,7 +32,7 @@
     <div class="navbar-container">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary-3 py-2" data-sticky="top">
         <div class="container">
-          <a class="navbar-brand fade-page" href="index.html">
+          <a class="navbar-brand fade-page" href="index">
             <img src="assets/additions/logo/full_logo_beside.png" style="height: 2.7rem" alt="Infinity AI">
           </a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,45 +70,61 @@
     <section class="bg-primary-3 text-light">
       <div class="container">
         <div class="row">
-          <h1 class="display-4-gr-0 col-auto">RepSet</h1>
+          <h1 class="display-4-gr-0 col-auto">InfiniteRep</h1>
         </div>
           <div class="row col-xl-12 col-lg-8 col-md-9">
             <p class="lead font-weight-light">An open-source synthetic dataset for remote fitness and remote PT applications. </p>
             <br>
           </div>
+
           <div class="row mt-3">
-            <a class="btn btn-lg btn-primary mr-4" target="_blank"> Dataset coming soon!</a>
-            <!--- <a href="https://pixelate.ai/InfiniteForm" class="btn btn-lg btn-primary mr-4 my-3" target="_blank"> Visit README</a>
-            <a href="https://pixelate.ai/InfiniteForm" class="btn btn-lg btn-primary" target="_blank"> Read Blog Post</a> --->
+            <div class="col-md-auto">
+              <a class="btn btn-lg btn-block btn-primary" href="http://eepurl.com/hTnH3L" target="_blank">Download dataset</a>
+            </div>
+
+            <div class="col-md-auto pr-md-0">
+              <a class="btn btn-lg btn-block btn-link mt-4 mt-md-0" href="https://github.com/toinfinityai/InfiniteRep" target="_blank">GitHub resources</a>
+            </div>
+
+            <!-- <div class="col-md-auto pl-md-0">
+              <a href="https://medium.com/infinity-ai/infiniterep-an-open-source-synthetic-dataset-for-remote-fitness-and-pt-applications-906946643e74" class="btn btn-lg btn-block btn-link mt-3 mt-md-0" target="_blank"> Read blog post</a>
+            </div> -->
+
           </div>
+
         </div>
       </div>
     </section>
 
+    <section class="justify-content-center align-items-center">
+        <div class="row mb-5 text-center">
+          <div class="col">
+            <h4 class="text-primary font-weight-light">Start building models faster.</h4>
+            <span class="h1" data-typed-text="" data-show-cursor="true" data-cursor-char="&nbsp" data-loop="true" data-type-speed="40" data-back-speed="10" data-fade-out="false" data-smart-backspace="false" data-strings="[&quot;Rep counting&quot;,&quot;Pose estimation&quot;,&quot;Form correction&quot;,&quot;Segmentation &quot;,&quot;Activity classification&quot;,&quot;And much more.&quot;]"></span>
+          </div>
+        </div>
 
+      <div class="container h-150 col-xl-8 col-md-10 col-lg-8">
+        <center>
+          <video loop autoplay muted class="rounded" style="width:100%; height:auto">
+            <source src="assets/additions/repset-page/placeholder_top.mp4" type="video/mp4">
+            </video>
+        </center>
+      </div>
+    </section>
 
-    <section class="pb-1">
+    <section style="background-color:#F7F7F7">
       <div class="container">
         <div class="row justify-content-center text-center mb-3">
           <div class="col-xl-8 col-lg-9">
-            <!-- <h4 class="text-primary font-weight-light"> OVERVIEW</h4> -->
             <h2 class="display-4 mb-5">Synthetic reps. Real results.</h2>
             <!-- <h2 class="display-4 mx-xl-6">The perfect vision dataset for fitness and PT applications</h2> -->
             <p class="lead text-left">
-                RepSet makes it easier for engineers to build vision-based products in remote fitness and PT.
+                InfiniteRep makes it easier for engineers to build vision-based products in remote fitness and PT.
               <br><br>
 
-              Designed to look like real-world videos collected by remote exercise companies, RepSet seamlessly integrates into existing pipelines. Each video is accompanied by a rich set of pixel-perfect labels and annotations, including rep counts.
+              Designed to look like real-world videos collected by remote exercise companies, the InfiniteRep dataset seamlessly integrates into existing pipelines. Each video is accompanied by a rich set of pixel-perfect labels and annotations, including rep counts.
               <br>
-
-              <!-- Engineer rep counting models, pose estimation models, form correction models, segmentation models, activity classification models, and much more.
-              <br><br> -->
-
-              <!-- The dataset contains 1,000 videos of diverse avatars doing multiple reps of 10 common exercises. It includes massive variation in the environment,
-              lighting conditions, avatar demographics, and movement trajectories. From cadence to kinematic trajectory, each rep is done slightly
-              differently (just like real humans). <br><br>
-
-              RepSet videos are accompanied by a rich set of pixel-perfect labels and annotations, including rep counts. -->
 
             </p>
             <br>
@@ -119,7 +135,7 @@
                   <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
                 </div>
                 <span>
-                  <span class="lead">1,000 videos (10-20 seconds each)</span>
+                  <span class="lead">1,000 videos (5-30 seconds each)</span>
               </li>
               <li class="d-flex py-2">
                 <div class="icon-round icon-round-xs bg-primary mr-2">
@@ -140,7 +156,7 @@
                   <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
                 </div>
                 <span>
-                  <span class="lead">15 indoor scenes</span>
+                  <span class="lead">7 indoor scenes</span>
               </li>
               <li class="d-flex py-2">
                 <div class="icon-round icon-round-xs bg-primary mr-2">
@@ -161,7 +177,7 @@
                   <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
                 </div>
                 <span>
-                  <span class="lead">25 label and annotation types</span>
+                  <span class="lead">18 label and annotation types</span>
               </li>
             </ul>
           </div>
@@ -169,23 +185,6 @@
       </div>
     </section>
 
-    <section class=" justify-content-center align-items-center mt-6 py-5" style="background-color:#F7F7F7">
-        <div class="row mb-5 text-center">
-          <div class="col">
-            <h4 class="text-primary font-weight-light">Start building models faster.</h4>
-            <span class="h1" data-typed-text="" data-show-cursor="true" data-cursor-char="&nbsp" data-loop="true" data-type-speed="40" data-back-speed="10" data-fade-out="false" data-smart-backspace="false" data-strings="[&quot;Rep counting&quot;,&quot;Pose estimation&quot;,&quot;Form correction&quot;,&quot;Segmentation &quot;,&quot;Activity classification&quot;,&quot;And much more.&quot;]"></span>
-          </div>
-        </div>
-
-      <div class="container h-150 col-xl-6 col-md-10 col-lg-8">
-        <center>
-          <video loop autoplay muted style="width:100%; height:auto">
-            <source src="assets/additions/repset-page/placeholder_top.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-        </center>
-      </div>
-    </section>
 
 
     <section class="pb-1 mt-4">
@@ -195,7 +194,7 @@
         </div>
         <div class="row justify-content-center">
 
-          <h2 class="display-4-gr-1 mt-3 mx-xl-6 col-auto">Lifelike rep behavior</h2>
+          <h2 class="display-4-gr-1 mt-3 mx-xl-6 col-auto text-center">Lifelike rep behavior</h2>
         </div>
 
         <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
@@ -203,7 +202,7 @@
             <img src="assets/additions/repset-page/kinematic_variation.gif" alt="Image">
           </div>
           <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h4 class="h5">Each rep is done slightly differently.<br> Just like a real human.</h4>
+            <h5>Each rep is done slightly differently.<br> Just like a real human.</h5>
             <p class="lead">From cadence variation to varying kinematic trajectories, no two reps are done exactly the same way. We built in vast amounts of movement variation to enable you to train robust algorithms.
             </p>
             <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
@@ -215,41 +214,11 @@
               <img src="assets/additions/repset-page/rpm_gif.gif" alt="Image">
             </div>
             <div class="col-lg-5 col-md-6" data-aos="fade-left">
-              <h4 class="h5">Transitions and breaks.<br> Perfect labels to help solve the hard stuff.</h4>
-              <p class="lead">The avatars transition into and out of the exercises and periodically take breaks in the middle.
-                We know that these transitions are hard to build robust algorithms around, so we made sure to provide perfect rep count and activity classification labels.
+              <h5>Inspired by real people.</h5>
+              <p class="lead">We used extensive real world movement data to model the unique intricacies of movement and produce realistic and robust training data.
               </p>
             </div>
           </div>
-
-<!-- card experiment -->
-        <!-- <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow col-10 px-0" data-aos="fade-right">
-              <div class="col align-self-center order-md-last">
-                <img src="assets/additions/repset-page/kinematic_variation.gif" style="height:auto; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto text-md-right">
-                <div class="h5">Each rep is done slightly differently. <br> Just like a real human.</div>
-                <p class="lead mb-0">From cadence variation to varying kinematic trajectories, no two reps are done exactly the same way. We built in vast amounts of movement variation to enable you to train robust algorithms.</p>
-                </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-left">
-              <div class="col align-self-center order-md-first">
-                <img src="assets/additions/repset-page/rpm_gif.gif" style="height:100%; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto">
-                <div class="h5">Transitions and breaks. <br> Perfect labels to help solve the hard stuff.</div>
-                <p class="lead mb-0">The avatars transition into and out of the exercises and periodically take breaks in the middle. We know that these transitions are hard to build robust algorithms around, so we made sure to provide perfect rep count and activity classification labels.</p>
-                </div>
-              </div>
-          </div>
-        </div> -->
 
       </div>
     </section>
@@ -259,7 +228,7 @@
     <section class="pb-1 mt-6">
       <div class="container">
           <div class="row justify-content-center">
-            <h2 class="display-4-gr-2 mx-xl-6 col-auto">Robust exercise library</h2>
+            <h2 class="display-4-gr-2 mx-xl-6 col-auto text-center">Robust exercise library</h2>
           </div>
 
         <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
@@ -267,7 +236,7 @@
             <img src="assets/additions/repset-page/exercises.gif" alt="Image">
           </div>
           <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h4 class="h5">Choose from common exercises.</h4>
+            <h5>Choose from common exercises.</h5>
             <p class="lead">The dataset includes 10 of the most common fitness and physical therapy (PT) exercises.
             </p>
             <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
@@ -281,40 +250,11 @@
               <img src="assets/additions/repset-page/elbow_to_knee_merged.gif" alt="Image">
             </div>
             <div class="col-lg-5 col-md-6" data-aos="fade-left">
-              <h4 class="h5">Or import any movement.</h4>
+              <h5>Or import any movement.</h5>
               <p class="lead">Generate synthetic videos from any movement. Leverage your own motion capture (Mo-Cap) data or just tell us the name of the exercise and we’ll take care of the rest.
               </p>
             </div>
           </div>
-
-<!-- card experimentation -->
-        <!-- <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-right">
-              <div class="col align-self-center order-md-last">
-                <img src="assets/additions/repset-page/exercises.gif" style="height:auto; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto text-md-right">
-                <div class="h5">Choose from common exercises.</div>
-                <p class="lead mb-0">The dataset includes 10 of the most common fitness and physical therapy (PT) exercises.</p>
-                </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-left">
-              <div class="col align-self-center order-md-first">
-                <img src="assets/additions/repset-page/elbow_to_knee_merged.gif" style="height:100%; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto">
-                <div class="h5">Or import any movement.</div>
-                <p class="lead mb-0">Generate synthetic videos from any movement. Leverage your own motion capture (Mo-Cap) data or just tell us the name of the exercise and we’ll take care of the rest.</p>
-                </div>
-              </div>
-          </div>
-        </div> -->
 
       </div>
     </section>
@@ -323,7 +263,7 @@
     <section class="pb-1 mt-6">
       <div class="container">
         <div class="row justify-content-center">
-            <h2 class="display-4-gr-3 mx-xl-6 col-auto">Infinite avatars and environments</h2>
+            <h2 class="display-4-gr-3 mx-xl-6 col-auto text-center">Infinite avatars and environments</h2>
         </div>
 
         <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
@@ -331,54 +271,23 @@
             <img src="assets/additions/repset-page/lighting.gif" alt="Image">
           </div>
           <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h4 class="h5">Varied rooms, camera angles, and lighting conditions.</h4>
-            <p class="lead">The dataset includes 15 backgrounds of home settings with a range of lighting conditions and camera angles.
+            <h5>Varied rooms, camera angles, and lighting conditions.</h5>
+            <p class="lead">The dataset includes 7 backgrounds of home settings with a range of lighting conditions and camera angles.
             </p>
             <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
           </div>
         </div>
-
-
 
           <div class="row align-items-center justify-content-around o-hidden">
             <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
               <img src="assets/additions/repset-page/skin-tone.gif" alt="Image">
             </div>
             <div class="col-lg-5 col-md-6" data-aos="fade-left">
-              <h4 class="h5">Diverse avatars for equitable and fair ML.</h4>
+              <h5>Diverse avatars for equitable and fair ML.</h5>
               <p class="lead">Give everyone a great home fitness experience by designing for a range of skin tones, body types, and clothing. The dataset has a normal distribution of body-types and equal distribution of skin tones.
               </p>
             </div>
           </div>
-
-<!-- card experimentation -->
-        <!-- <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-right">
-              <div class="col align-self-center order-md-last">
-                <img src="assets/additions/repset-page/lighting.gif" style="height:auto; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto text-md-right">
-                <div class="h5">Varied rooms, camera angles, and lighting conditions.</div>
-                <p class="lead mb-0">The dataset includes 15 backgrounds of home settings with a range of lighting conditions and camera angles.</p>
-                </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-left">
-              <div class="col align-self-center order-md-first">
-                <img src="assets/additions/repset-page/skin-tone.gif" style="height:100%; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto">
-                <div class="h5">Diverse avatars for equitable and fair ML.</div>
-                <p class="lead mb-0">Give everyone a great home fitness experience by designing for a range of skin tones, body types, and clothing. The dataset has a normal distribution of body-types and equal distribution of skin tones.</p>
-                </div>
-              </div>
-          </div>
-        </div> -->
 
       </div>
     </section>
@@ -388,7 +297,7 @@
     <section class="pb-1 mt-6">
       <div class="container">
         <div class="row justify-content-center">
-            <h2 class="display-4-gr-4 mx-xl-6 col-auto">Detailed labels</h2>
+            <h2 class="display-4-gr-4 mx-xl-6 col-auto text-center">Detailed labels</h2>
         </div>
 
         <div class="row align-items-center justify-content-around o-hidden mt-6">
@@ -396,26 +305,11 @@
             <img src="assets/additions/repset-page/labels.gif" alt="Image">
           </div>
           <div class="col-lg-5 col-md-6" data-aos="fade-left">
-            <h4 class="h5">Pixel-perfect labels and rich annotations.</h4>
+            <h5>Pixel-perfect labels and rich annotations.</h5>
             <p class="lead">The dataset allows engineers to build rep counting models, pose estimation models, form-correction models, segmentation models, activity classification models, and much more.
             </p>
           </div>
         </div>
-
-<!-- card experimentation -->
-        <!-- <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-left">
-              <div class="col align-self-center order-md-first">
-                <img src="assets/additions/repset-page/labels.gif" style="height:auto; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-6 d-flex flex-column justify-content-between p-3 p-lg-5">
-                <div class="my-auto">
-                <div class="h5">Pixel-perfect labels and rich annotations.</div>
-                <p class="lead mb-0">The dataset allows engineers to build rep counting models, pose estimation models, form-correction models, segmentation models, activity classification models, and much more.</p>
-                </div>
-              </div>
-          </div>
-        </div> -->
 
       </div>
     </section>
@@ -424,7 +318,7 @@
     <section class="pb-1 mt-6">
       <div class="container">
         <div class="row justify-content-center">
-            <h2 class="display-4-gr-0 mx-xl-6 col-auto">Open-source</h2>
+            <h2 class="display-4-gr-0 mx-xl-6 col-auto text-center">Open-source</h2>
         </div>
 
         <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
@@ -432,140 +326,77 @@
             <img src="assets/additions/repset-page/camera.gif" alt="Image">
           </div>
           <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h4 class="h5">Build without limits.</h4>
-            <p class="lead">RepSet is one of the few human-centric datasets that is available for both academic and commercial use.
+            <h5>Build without limits.</h5>
+            <p class="lead">InfiniteRep is one of the few human-centric datasets that is available for both academic and commercial use.
             </p>
             <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
           </div>
         </div>
-
-<!-- card experimentation -->
-        <!-- <div class="row justify-content-center mt-4">
-          <div class="card card-article-wide flex-md-row no-gutters border-0 shadow-lg col-10 px-0" data-aos="fade-right">
-              <div class="col align-self-center order-md-last">
-                <img src="assets/additions/repset-page/camera.gif" style="height:auto; width:100%;" alt="Image" class="card-img-right">
-              </div>
-              <div class="card-body col-md-7 d-flex flex-column justify-content-between p-3 p-lg-5 pr-lg-6">
-                <div class="my-auto text-md-right">
-                <div class="h5">Build without limits.</div>
-                <p class="lead mb-0">RepSet is one of the few human-centric datasets that is available for both academic and commercial use.</p>
-                </div>
-              </div>
-          </div>
-        </div> -->
 
       </div>
     </section>
 
 
 
-    <!-- <section class="pt-0">
+    <section class="pb-1 mt-6" style="background-color:#F7F7F7">
       <div class="container">
-        <div class="row align-items-center justify-content-around text-right flex-row-reverse o-hidden">
-          <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
-            <img src="assets/additions/repset-page/camera.gif" alt="Image">
-          </div>
-          <div class="col-lg-5 col-md-6" data-aos="fade-right">
-            <h4 class="h5">Build without limits.</h4>
-            <p class="lead">RepSet is one of the few human-centric datasets that is available for both academic and commercial use.
+        <div class="row justify-content-center text-center mb-6">
+          <div class="col-xl-8 col-lg-9">
+            <h4 class="text-primary font-weight-light"> SYNTHETIC DATA AS A SERVICE</h4>
+            <h2 class="display-4 mx-xl-6">We're excited to hear from you.</h2>
+            <p class="lead text-left">
+              We’re a small team of dedicated engineers who built this dataset hoping it’d be useful to people like you!
+              <br><br>
+              <b>Has the dataset been useful?</b> We love hearing good things!
+              <br><br>
+              <b>Has the dataset not helped your model?</b> We’d love to help debug.
+              <br><br>
+              <b>Do you want a different dataset?</b> We specialize in generating custom synthetic data.
+              <br><br>
+              Drop us a line at <a href="mailto:lina@toinfinity.ai">lina@toinfinity.ai</a> (we read every email).
             </p>
+            <br>
           </div>
         </div>
       </div>
-    </section> -->
-
-
-
-
-      <section class="pb-1 mt-6" style="background-color:#F7F7F7">
-        <div class="container">
-          <div class="row justify-content-center text-center mb-6">
-            <div class="col-xl-8 col-lg-9">
-              <h4 class="text-primary font-weight-light"> SYNTHETIC DATA AS A SERVICE</h4>
-              <h2 class="display-4 mx-xl-6">We're excited to hear from you.</h2>
-              <p class="lead text-left">
-                We’re a small team of dedicated engineers who built this dataset hoping it’d be useful to people like you! We would love to hear from you.
-                <br><br>
-                <b>Has the dataset been useful?</b> We love hearing good things!
-                <br><br>
-                <b>Has the dataset not helped your model?</b> We’d love to help debug.
-                <br><br>
-                <b>Do you want a different dataset?</b> We specialize in generating custom synthetic data.
-                <br><br>
-                Drop Lina a line at <a href="mailto:lina@toinfinity.ai">lina@toinfinity.ai</a> (she reads every email).
-
-
-              </p>
-              <br>
-            </div>
-          </div>
-        </div>
-      </section>
+    </section>
 
       <section class="bg-primary-3 text-light">
         <div class="container">
           <div class="row">
-            <h1 class="display-4-gr-0 col-auto">RepSet</h1>
+            <h1 class="display-4-gr-0 col-auto">InfiniteRep</h1>
           </div>
             <div class="row col-xl-12 col-lg-8 col-md-9">
               <p class="lead font-weight-light">An open-source synthetic dataset for remote fitness and remote PT applications. </p>
               <br>
             </div>
+
             <div class="row mt-3">
-              <a class="btn btn-lg btn-primary mr-4" target="_blank"> Dataset coming soon!</a>
-              <!--- <a href="https://pixelate.ai/InfiniteForm" class="btn btn-lg btn-primary mr-4 my-3" target="_blank"> Visit README</a>
-              <a href="https://pixelate.ai/InfiniteForm" class="btn btn-lg btn-primary" target="_blank"> Read Blog Post</a> --->
+              <div class="col-md-auto">
+                <a class="btn btn-lg btn-block btn-primary" href="http://eepurl.com/hTnH3L" target="_blank">Download dataset</a>
+              </div>
+
+              <div class="col-md-auto pr-md-0">
+                <a class="btn btn-lg btn-block btn-link mt-4 mt-md-0" href="https://github.com/toinfinityai/InfiniteRep" target="_blank">GitHub resources</a>
+              </div>
+
+              <div class="col-md-auto pl-md-0">
+                <a href="https://medium.com/infinity-ai/infiniterep-an-open-source-synthetic-dataset-for-remote-fitness-and-pt-applications-906946643e74" class="btn btn-lg btn-block btn-link mt-3 mt-md-0" target="_blank"> Read blog post</a>
+              </div>
+
             </div>
+
           </div>
         </div>
       </section>
 
-
-
-
-    <!-- <section class="pt-0">
-      <div class="container text-center">
-        <div class="row mb-5">
-          <div class="col">
-            <h5>Trusted by over 30,000 of the world’s leading companies</h5>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-xl-8 col-lg-9">
-            <ul class="d-flex flex-wrap justify-content-center list-unstyled">
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/apple.svg" alt="icon" data-inject-svg />
-              </li>
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/buzzfeed.svg" alt="icon" data-inject-svg />
-              </li>
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/intercom.svg" alt="icon" data-inject-svg />
-              </li>
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/slack.svg" alt="icon" data-inject-svg />
-              </li>
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/spotify.svg" alt="icon" data-inject-svg />
-              </li>
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/target.svg" alt="icon" data-inject-svg />
-              </li>
-              <li class="mx-3 mb-5">
-                <img class="icon icon-md bg-primary-3 opacity-20" src="assets/img/logos/brand/time.svg" alt="icon" data-inject-svg />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
 
     <footer class="pb-5 pt-2 bg-primary-2-alt text-light-3">
       <div class="container">
         <div class="row mb-1 mt-1 justify-content-center">
           <div class="col-auto">
-            <a href="">
+            <a href="index">
               <img src="assets/additions/logo/full_logo_beside.svg" alt="Infinity AI" class="icon" style="height: 15rem; width: 15rem">
             </a>
           </div>
@@ -619,7 +450,7 @@
         </div>
         <div class="row justify-content-center text-center">
           <div class="col-xl-10">
-            <small class="text-muted">&copy;2022 All Rights Reserved. Infinity AI® and the Pixelate API® are trademarks of Infinity AI.</small>
+            <small class="text-muted">Made by ML engineers for ML engineers &#9829 <br>&copy; Infinity AI, Inc. 2022. All Rights Reserved. </small>
           </div>
         </div>
       </div>
