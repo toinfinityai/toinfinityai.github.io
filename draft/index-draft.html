@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Infinity AI</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Infinity AI">
+    <meta name="keywords" content="Ininfity, AI, synthetic data, data, fitness, remote fitness, AR, VR, MR, safety, ergonomics, human optimization, physical therapy">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <!-- <link rel="shortcut icon" href="assets/favicon/favicon.ico"> -->
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+
+
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #131022;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <!-- <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script> -->
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== undefined && mode === 'dark') {
+        root.classList.add('dark-mode');
+        mode = 'dark';
+      } else {
+        root.classList.remove('dark-mode');
+        mode = 'dark'
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo/infinity_full_logo.svg" width="150" alt="Infinity AI">
+
+          </a>
+          <!-- <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
+                  <div class="dropdown-menu p-0">
+                    <div class="d-lg-flex">
+                      <div class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0" style="background-image: url(assets/img/landings.jpg); margin: -1px;"></div>
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
+                          <li><a href="landing-mobile-app-showcase.html" class="dropdown-item">Mobile App Showcase</a></li>
+                          <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
+                          <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
+                          <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
+                          <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
+                          <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
+                          <li><a href="landing-software-company.html" class="dropdown-item">IT (Software) Company</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                        <ul class="list-unstyled mb-0">
+                          <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
+                          <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
+                          <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                  <div class="dropdown-menu">
+                    <div class="d-lg-flex pt-lg-3">
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">About</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
+                          <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Portfolio</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
+                          <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
+                          <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
+                          <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
+                          <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
+                          <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">Blog</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
+                          <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
+                          <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
+                          <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
+                          <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
+                          <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
+                          <li><a href="blog-podcast.hml" class="dropdown-item py-1">Podcast</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Services</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="services.html" class="dropdown-item py-1">Services Page</a></li>
+                          <li><a href="services-single.html" class="dropdown-item py-1">Service Details</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column">
+                        <h6 class="px-3 mb-2">Contacts</h6>
+                        <ul class="list-unstyled mb-3">
+                          <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
+                          <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
+                        </ul>
+                        <h6 class="px-3 mb-2">Specialty</h6>
+                        <ul class="list-unstyled">
+                          <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
+                          <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
+                    <li><a href="account-security.html" class="dropdown-item">Security</a></li>
+                    <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
+                    <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
+                    <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
+                    <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
+                    <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
+                    <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
+                    <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="components/typography.html" class="nav-link">UI Kit</a>
+                </li>
+                <li class="nav-item">
+                  <a href="docs/getting-started.html" class="nav-link">Docs</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-footer border-top">
+              <a href="#" class="btn btn-primary w-100">
+                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
+                &nbsp;Buy now
+              </a>
+            </div>
+          </div> -->
+
+
+<!-- dark mode tooggle -->
+          <div class="invisible form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" checked class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+
+
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            Learn more
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Intro -->
+      <section class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5 px-md-4" style="background-image: url(assets/img/landing/hero-bg.svg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+        <div class="container position-relative zindex-5 py-5">
+          <div class="row justify-content-md-start justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-sm-10 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+              <div class="mb-md-5 pb-xl-5 mb-4">
+
+
+                <!-- Text -->
+                <h1 class="display-2 mb-md-5 mb-3 pb-3">
+                  Synthetic data built to <span class="text-gradient-primary">your</span> spec
+                </h1>
+                <p class="fs-5 mb-4">Infinity AI enables computer vision teams to build better, debug faster, and prototype at the click of a button.</p>
+                  <a href="mailto:info@toinfinity.ai" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Work with us</a>
+              </div>
+
+              <!-- Scroll down btn -->
+              <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
+                <a href="#start" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3">
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <span class="fs-sm">Discover more</span>
+              </div>
+            </div>
+
+            <!-- Animated gfx -->
+            <!-- <div class="col-sm-6 col-sm-6 col-9 order-md-2 order-1">
+              <lottie-player class="mx-auto" src="assets/json/animation-digital-agency.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            </div> -->
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+    <!-- Infinite use cases -->
+
+
+    <section class="container pt-xl-3 pb-5 mb-5" id="start">
+      <h2 class="h1 text-center text-lg-start pb-4 mt-5 mb-1 mb-lg-3">Infinite possibilities</h2>
+      <div class="row pb-2 pb-md-4 pb-lg-5">
+        <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+
+          <!-- Swiper slider -->
+          <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+            "spaceBetween": 30,
+            "loop": true,
+            "tabs": true,
+            "autoHeight": true,
+            "navigation": {
+              "prevEl": "#prev-industry",
+              "nextEl": "#next-industry"
+            }
+          }'>
+            <div class="swiper-wrapper text-start">
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-1">
+                <h3 class="h4 mb-4">
+                    Minimizes data bias
+                </h3>
+                <p>Infinite AI synthetic data enables complete control over distributions of data, including body shape, skin tone, and presenting gender, ensuring models with minimal bias. <br><br>
+                Our first open-source dataset for remote fitness applications, InfiniteForm, was born out of our goal to make remote fitness a more inclusive experience that works accurately across all body shapes and skin tones.</p>
+                <a href="#" class="nav-link justify-content-start fw-bold p-0">
+                  Discover InfiniteForm
+                  <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+                </a>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-2">
+                <h3 class="h4 mb-4">
+                    Provides unlimited labels
+                </h3>
+                <p>Infinity AI synthetic data comes with pixel-perfect labels that might be hard or even impossible to get via manual annotations. Labels can include semantic segmentation, 2D and 3D keypoints, bounding boxes, 3D cuboids, depth, surface normals, camera position, objects attributes (e.g. human body dimensions), and more.</p>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide" data-swiper-tab="#industry-3">
+                <h3 class="h4 mb-4">
+                    Enables rapid iteration
+                </h3>
+                <p>Hypotheses can be tested using synthetic images instead of waiting for real-world data. This enables tailoring of models to specific applications and can result in better model performance. <br><br>
+              Rapid iteration enabled our team to build a pose estimation model that outperformed Google's BlazePose model!</p>
+                <a href="#" class="nav-link justify-content-start fw-bold p-0">
+                  Check out the results
+                  <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider controls (Prev / next buttons) -->
+          <div class="d-flex justify-content-center justify-content-lg-start mt-5 mt-lg-auto">
+            <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+
+            <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-7 offset-xl-1 order-1 order-lg-2 pt-lg-3 mt-lg-n5 mb-4 mb-lg-0">
+
+          <!-- Swiper tabs (Industry images) -->
+          <div class="swiper-tabs mt-lg-n5">
+
+            <!-- Industry 1 -->
+            <div id="industry-1" class="swiper-tab active">
+              <img src="assets/img/landing/skin-tone.gif" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 2 -->
+            <div id="industry-2" class="swiper-tab">
+              <img src="assets/img/landing/labels.png" class="rounded-3" alt="Image">
+            </div>
+
+            <!-- Industry 3 -->
+            <div id="industry-3" class="swiper-tab">
+              <img src="assets/img/landing/rapid_iteration.gif" class="rounded-3" alt="Image" data-mode="video">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Use cases -->
+    <section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
+      <div class="card border-0 bg-secondary p-md-5 px-sm-2 pt-4 pb-3">
+        <div class="card-body mx-auto" style="max-width: 772px;">
+          <h2 class="h1 mb-4 text-center">Infinite use cases</h2>
+          <p class="mb-4 pb-3 fs-lg text-center text-muted">We work with world-class ML teams on cutting edge problems across many applications.</p>
+
+          <!-- Accordion: Alternative style -->
+          <div class="accordion" id="accordion-services">
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header" id="heading-1">
+                <button class="accordion-button fs-xl shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Remote Fitness</button>
+              </h3>
+              <div class="accordion-collapse collapse show" id="collapse-1" aria-labelledby="heading-1" data-bs-parent="#accordion-services">
+                <div class="accordion-body pt-0">
+                  <div class="d-flex flex-md-row flex-column align-items-md-center">
+                    <div class="mx-auto col-md-4">
+                      <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_xy8qjnxc.json"  background="transparent"  speed="1"  style="width: 200;"  loop  autoplay></lottie-player>
+                  </div>
+                    <div class="ps-md-3 pl-5 col-md-7">
+                      <p class="mb-0 py-3 py-md-0">Ensure your users get the best workout possible from anywhere. By taking the real world into account, like bad lighting or lamp in the way, we enable accurate rep counting and form feedback.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header" id="heading-2">
+                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Safety & Ergonomics</button>
+              </h3>
+              <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
+                <div class="accordion-body pt-0">
+                  <div class="d-flex flex-md-row flex-column align-items-md-center">
+                    <div class="mx-auto col-md-4">
+                      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_sheanuio.json"  background="transparent"  speed="1"  style="width: 200px; height: auto;"  loop  autoplay></lottie-player>
+                    </div>
+                    <div class="ps-md-3">
+                      <p class="mb-0 py-3 py-md-0">Evaluate your working conditions to build the safest workspace possible. Provide workers the confidence in your plans because simulations were run in lifelike conditions.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header" id="heading-3">
+                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">AR & VR</button>
+              </h3>
+              <div class="accordion-collapse collapse" id="collapse-3" aria-labelledby="heading-3" data-bs-parent="#accordion-services">
+                <div class="accordion-body pt-0">
+                  <div class="d-flex flex-md-row flex-column align-items-md-center">
+                    <div class="mx-auto col-md-4">
+                      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_qkeaard3.json"  background="transparent"  speed="1"  style="width: 200px; height: 100%;"  loop  autoplay></lottie-player>
+                    </div>
+                    <div class="ps-md-3">
+                      <p class="mb-0 py-3 py-md-0">The metaverse is coming, and what better way to prepare for it than to look at all the possibilities. Future proof your technology by adapting to a more interactive medium.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header" id="heading-4">
+                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">Physical Therapy</button>
+              </h3>
+              <div class="accordion-collapse collapse" id="collapse-4" aria-labelledby="heading-4" data-bs-parent="#accordion-services">
+                <div class="accordion-body pt-0">
+                  <div class="d-flex flex-md-row flex-column align-items-md-center">
+                    <div class="mx-auto col-md-4">
+                      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ze1apkln.json"  background="transparent"  speed="1"  style="width: 200px;"  loop  autoplay></lottie-player>
+                    </div>
+                    <div class="ps-md-3">
+                      <p class="mb-0 py-3 py-md-0">Recovery is difficult without the right guideance. Boost recovery training adherence by training models to recognize PT exercises remotely.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+              <h3 class="accordion-header" id="heading-5">
+                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">Human Optimization</button>
+              </h3>
+              <div class="accordion-collapse collapse" id="collapse-5" aria-labelledby="heading-5" data-bs-parent="#accordion-services">
+                <div class="accordion-body pt-0">
+                  <div class="d-flex flex-md-row flex-column align-items-md-center">
+                    <div class="mx-auto col-md-4">
+                      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_pxigjnix.json"  background="transparent"  speed="1"  style="width: 200px; height: 100%;"  loop  autoplay></lottie-player>
+                    </div>
+                    <div class="ps-md-3">
+                      <p class="mb-0 py-3 py-md-0">Run your operation at peak efficiency by using synthetic data to find areas of improvement. See gains in repetitive tasks like those on assembly lines or surgery rooms.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- Services -->
+      <section class="container py-5 my-2 my-md-4 my-lg-5">
+        <h2 class="h1 text-center pt-1 pt-xl-3 mb-5">What we can do for you</h2>
+
+        <div class="row justify-content-center">
+            <!-- Item -->
+            <div class="h-auto py-3 col-12 col-md-5 col-lg-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-code-curly display-5 fw-normal card-icon"></i>
+                <h3 class="h4 pt-3 pb-1 mb-2">Custom datasets</h3>
+                <p class="mb-0">We build customized datasets to fit your needs.</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="h-auto py-3 col-12 col-md-3 col-lg-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-briefcase-alt display-5 fw-normal card-icon"></i>
+                <h3 class="h4 pt-3 pb-1 mb-2">Consulting</h3>
+                <p class="mb-0">We offer full-service consulting services for synthetic data integration.</p>
+              </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center pt-3 pt-sm-4">
+          <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-lg">Contact us</a>
+        </div>
+          <br><br><br>
+      </section>
+
+
+<!-- Services -->
+<section class="pb-md-2 pb-lg-5">
+  <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
+  <div class="container pb-4 pt-5">
+    <h2 class="h1 text-center mb-lg-4 pt-1 pt-md-4">Our datasets</h2>
+    <div class="row justify-content-center mb-lg-2">
+      <div class="col-md-8">
+        <p class="fs-lg text-muted mb-md-0 text-center">Every dataset we publish is <span class="text-light">open source</span> for academic and commercial use.</p>
+      </div>
+      <!-- <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
+        <a href="services.html" class="btn btn-outline-primary btn-lg">See all services</a>
+      </div> -->
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 pt-3 mt-5">
+
+      <!-- Item -->
+      <div class="col py-4 my-2 my-sm-3">
+        <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+          <div class="card-body pt-3">
+            <div class="d-inline-block bg-dark shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+              <img src="assets/img/landing/rep_icon.svg" class="d-block m-1" width="40" alt="Icon">
+            </div>
+            <h1 class="h1 fw-medium d-inline-flex align-items-center text-gradient-primary">
+              <span class="text-gradient-primary">InfiniteRep</span>
+              <!-- <i class="bx bx-right-arrow-circle text-primary fs-2 ms-2"></i> -->
+            </h1>
+            <p class="fs-md text-body mb-0">Pixel perfect labelled videos for remote fitness and PT applications.</p>
+            <div class="col">
+              <a href="https://toinfinity.ai/infiniterep" class="nav-link fw-bold px-0 pt-4 stretched-link">
+                Try it free
+                <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="col py-4 my-2 my-sm-3">
+        <div class="card card-hover h-100 border-0 shadow-sm text-decoration-none pt-5 px-sm-3 px-md-0 px-lg-3 pb-sm-3 pb-md-0 pb-lg-3 me-xl-2">
+          <div class="card-body pt-3">
+            <div class="d-inline-block bg-dark shadow-primary rounded-3 position-absolute top-0 translate-middle-y p-3">
+              <img src="assets/img/landing/form_icon.svg" class="d-block m-1" width="40" alt="Icon">
+            </div>
+            <h2 class="h1 fw-medium d-inline-flex align-items-center text-gradient-secondary">
+              <span class="text-gradient-secondary">InfiniteForm</span>
+              <!-- <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i> -->
+            </h2>
+            <p class="fs-md text-body mb-0">Track human poses with realistic and diverse images.</p>
+            <div class="col">
+              <a href="https://pixelate.ai/InfiniteForm" class="nav-link fw-bold px-0 pt-4 stretched-link">
+                Try it free
+                <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+      <br><br><br><br>
+</section>
+
+
+      <!-- Blog + Contact cta -->
+    <div class="bg-secondary mb-5 pt-5 mx-0">
+      <br><br><br>
+        <!-- Blog -->
+        <section class="container mb-5 py-lg-5">
+          <div class="col-12 col-md-10 col-lg-6 mx-auto">
+            <h2 class=" h1mb-4 pb-3 text-center">We are leading the charge for synthetic data in computer vision</h2>
+          </div>
+
+
+        <!-- Paper -->
+          <div class="row mt-5 mx-auto card card-hover border-primary">
+            <div class="row px-0 mx-auto">
+              <div class="col-lg-5 align-self-center mx-auto py-5">
+                <p class="fs-2 text-center text-lg-start mb-4">Published at the NeurIPS <br> Data-Centric AI Workshop</p>
+                <p class="pb-2 pb-lg-4 pb-xl-5 mb-3 text-center text-lg-start">Introducing InfiniteForm, our synthetic, minimal bias dataset for fitness applications.</p>
+                <a href="https://arxiv.org/abs/2110.01330" target="_blank" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                  Read paper
+                  <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+                </a>
+              </div>
+
+
+              <div class="col-auto px-0 justify-content-center">
+                <div class="position-relative">
+                  <div class="position-relative overflow-hidden bg-gradient-primary rounded-3 zindex-5 py-5 px-4 p-sm-5">
+                    <span class="position-absolute top-0 start-0 w-100 h-100 bg-repeat-0 bg-position-center-end bg-size-cover" style="background-image: url(assets/img/landing/paper-bg.png);"></span>
+                      <div class="">
+                        <div class="d-table bg-white rounded-3 p-1 flex-shrink-0 m-0">
+                          <a href="https://arxiv.org/abs/2110.01330" target="_blank" class="stretched-link"> <img src="assets/img/landing/neurips_paper.png" width="400" alt="NeurIPS Paper"></a>
+                        </div>
+                      </div>
+                  </div>
+                  <span class="position-absolute bg-gradient-primary opacity-60 bottom-0 mb-n2 d-dark-mode-none" style="left: 1.5rem; width: calc(100% - 3rem); height: 5rem; filter: blur(.625rem);"></span>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+<br><br><br>
+
+          <div class="row mt-5">
+            <div class="col-lg-5 col-12 mb-lg-0 mb-4">
+
+              <!-- Article -->
+              <article class="card h-100 border-0 shadow-sm">
+                <div class="position-relative">
+                  <a href="https://medium.com/infinity-ai/synthetic-data-for-computer-vision-closing-the-sim-to-real-gap-3c788ffe7916" target="_blank" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <img src="assets/img/landing/domain_randomization.png" class="card-img-top" alt="Image">
+                </div>
+                <div class="card-body pb-4">
+                  <h3 class="h5">
+                    <a href="https://medium.com/infinity-ai/synthetic-data-for-computer-vision-closing-the-sim-to-real-gap-3c788ffe7916" target="_blank" >Synthetic Data for Computer Vision: Closing the Sim-to-Real Gap</a>
+                  </h3>
+                  <span class="fs-sm text-muted">A common challenge that arises when using synthetic data is the sim-to-real gap.</span>
+                </div>
+                <div class="card-footer py-4">
+                  <div class="d-inline-flex align-items-center position-relative me-3">
+                    <img src="assets/img/team/andrew_blur.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
+                    <div>
+                      <a href="https://medium.com/@andrew.j.weitz" target="_blank" class="nav-link p-0 fw-bold text-decoration-none stretched-link">Andrew Weitz, PhD</a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col">
+
+              <!-- Article -->
+              <article class="card border-0 shadow-sm overflow-hidden mb-4">
+                <div class="row g-0">
+                  <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/landing/infiniteform-blog.png); min-height: 15rem;">
+                    <a href="https://medium.com/infinity-ai/infiniteform-a-synthetic-minimal-bias-dataset-for-fitness-applications-346e69f35b81" target="_blank" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h3 class="h5">
+                        <a href="https://medium.com/infinity-ai/infiniteform-a-synthetic-minimal-bias-dataset-for-fitness-applications-346e69f35b81" target="_blank">InfiniteForm: a synthetic, minimal bias dataset for fitness applications</a>
+                      </h3>
+                      <span class="fs-sm text-muted">With 60k images labeled with 9 unique image labels, InfiniteForm is the most comprehensive open-source fitness dataset available.</span>
+                      <hr class="my-4">
+                      <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
+                        <div class="d-flex align-items-center position-relative me-3">
+                          <img src="assets/img/team/brinnae.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
+                          <div>
+                            <a href="https://runsdata.medium.com/" target="_blank" class="nav-link p-0 fw-bold text-decoration-none stretched-link">Brinnae Bent, PhD</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Article -->
+              <article class="card border-0 shadow-sm overflow-hidden">
+                <div class="row g-0">
+                  <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/landing/fake-blog.gif); min-height: 15rem;">
+                    <a href="https://medium.com/infinity-ai/fake-it-til-you-make-it-the-advantages-of-using-synthetic-data-in-computer-vision-models-e20987397345" target="_blank" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  </div>
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h3 class="h5">
+                        <a href="https://medium.com/infinity-ai/fake-it-til-you-make-it-the-advantages-of-using-synthetic-data-in-computer-vision-models-e20987397345" target="_blank">Fake it ’til you make it — the advantages of using synthetic data in computer vision models?</a>
+                      </h3>
+                      <span class="fs-sm text-muted">An introduction to using synthetic data in computer vision models.</span>
+                      <hr class="my-4">
+                      <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
+                        <div class="d-flex align-items-center position-relative me-3">
+                          <img src="assets/img/team/lina.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
+                          <div>
+                            <a href="https://medium.com/@lcolucci" target="_blank" class="nav-link p-0 fw-bold text-decoration-none stretched-link">Lina Colucci, PhD</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 mt-4 pt-lg-4 pt-3 text-center">
+              <a href="https://medium.com/infinity-ai" target="_blank" class="btn btn-lg btn-outline-primary w-sm-auto w-100">Check out our blog -></a>
+            </div>
+          </div>
+        </section>
+
+        <br><br><br><br><br>
+
+        <!-- Contact CTA -->
+        <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
+          <div class="card border-0 bg-gradient-primary">
+            <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/landing/contact-bg.png);">
+              <div class="py-md-5 py-4 text-center">
+                <h3 class="h3 fw-medium text-light">Want us to put synthetic data to work for you?</h3>
+                <div class="pt-md-5 pt-4 pb-md-2">
+                  <a href="mailto:info@toinfinity.ai" class="btn btn-lg btn-light">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    <br><br>
+        </section>
+      </div>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-3">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4 mx-0">
+          <img src="assets/img/logo/infinity_full_logo.svg" class="me-2" width="350" alt="Infinity AI">
+        </div>
+        <!-- <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+        </ul> -->
+        <div class="d-flex justify-content-center pt-5 mt-lg-3">
+          <a href="https://twitter.com/toinfinityai" target="_blank" class="btn btn-icon btn-secondary btn-twitter mx-2">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="https://medium.com/infinity-ai" target="_blank" class="btn btn-icon btn-secondary btn-medium mx-2">
+            <i class="bx bxl-medium"></i>
+          </a>
+          <a href="https://www.instagram.com/toinfinityai/" target="_blank" class="btn btn-icon btn-secondary btn-instagram mx-2">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/channel/UCcp4XyLKD1-1XDWH1lh_njA" target="_blank" class="btn btn-icon btn-secondary btn-youtube mx-2">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+        <p class="fs-sm text-center pt-5 mt-lg-4 mb-0 opacity-80">
+          Made by ML engineers for ML engineers ♥
+        </p>
+        <p class="fs-sm text-center mt-lg-4 mb-0 opacity-80">
+          © Infinity AI, Inc. 2022. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="assets/vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/shufflejs/dist/shuffle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>

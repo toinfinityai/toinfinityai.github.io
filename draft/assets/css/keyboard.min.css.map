@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../vendor/swiper/modules/keyboard/keyboard.scss"
+    ],
+    "names": [],
+    "file": "keyboard.min.css"
+}
