@@ -2,6 +2,21 @@
 <html lang="en">
 
 <head>
+
+    <!-- 
+      
+      ______             ___                 __                ______  ______     
+      /\__  _\          /'___\ __          __/\ \__            /\  _  \/\__  _\    
+      \/_/\ \/     ___ /\ \__//\_\    ___ /\_\ \ ,_\  __  __   \ \ \L\ \/_/\ \/    
+        \ \ \   /' _ `\ \ ,__\/\ \ /' _ `\/\ \ \ \/ /\ \/\ \   \ \  __ \ \ \ \    
+          \_\ \__/\ \/\ \ \ \_/\ \ \/\ \/\ \ \ \ \ \_\ \ \_\ \   \ \ \/\ \ \_\ \__ 
+          /\_____\ \_\ \_\ \_\  \ \_\ \_\ \_\ \_\ \__\\/`____ \   \ \_\ \_\/\_____\
+          \/_____/\/_/\/_/\/_/   \/_/\/_/\/_/\/_/\/__/ `/___/> \   \/_/\/_/\/_____/
+                                                          /\___/                   
+                                                          \/__/                     
+      -->
+
+
     <meta charset="utf-8">
     <title>Infinity AI</title>
 
@@ -183,7 +198,7 @@
         <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
             <div class="container px-3">
                 <a href="index.html" class="navbar-brand pe-3">
-                    <img src="draft/assets/img/logo/infinity_full_logo.svg" width="150" alt="Infinity AI">
+                    <img src="draft/assets/img/logo/infinity_full_logo.png" width="150" alt="Infinity AI">
 
                 </a>
                 <!-- <div id="navbarNav" class="offcanvas offcanvas-end">
@@ -312,11 +327,11 @@
 
 
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <span class="navbar-toggler-icon"></span>
+        </button>
                 <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
-            Learn more
-          </a>
+          Learn more
+        </a>
             </div>
         </header>
 
@@ -371,7 +386,10 @@
             "spaceBetween": 30,
             "loop": true,
             "tabs": true,
-            "autoHeight": true,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
             "navigation": {
               "prevEl": "#prev-industry",
               "nextEl": "#next-industry"
@@ -398,7 +416,8 @@
                                     Provides unlimited labels
                                 </h3>
                                 <p>Infinity AI synthetic data comes with pixel-perfect labels that might be hard or even impossible to get via manual annotations. Labels can include semantic segmentation, 2D and 3D keypoints, bounding boxes, 3D cuboids,
-                                    depth, surface normals, camera position, objects attributes (e.g. human body dimensions), and more.</p>
+                                    depth, surface normals, camera position, objects attributes (e.g. human body dimensions), and more.
+                                </p>
                             </div>
 
                             <!-- Item -->
@@ -421,7 +440,7 @@
                         <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
               <i class="bx bx-chevron-left"></i>
             </button>
-
+                        <div class="swiper-pagination position-static w-auto mx-3" style="min-width: 30px;"></div>
                         <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
               <i class="bx bx-chevron-right"></i>
             </button>
@@ -491,10 +510,12 @@
                                 <div class="accordion-body pt-0">
                                     <div class="d-flex flex-md-row flex-column align-items-md-center">
                                         <div class="mx-auto col-md-4">
-                                            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_sheanuio.json" background="transparent" speed="1" style="width: 200px; height: auto;" loop autoplay></lottie-player>
+                                            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_sheanuio.json" background="transparent" speed="1" style="width: 200px; height: auto;" loop autoplay>
+                                            </lottie-player>
                                         </div>
                                         <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">Evaluate your working conditions to build the safest workspace possible. Provide workers the confidence in your plans because simulations were run in lifelike conditions.</p>
+                                            <p class="mb-0 py-3 py-md-0">Evaluate your working conditions to build the safest workspace possible. Provide workers the confidence in your plans because simulations were run in lifelike conditions.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -510,10 +531,12 @@
                                 <div class="accordion-body pt-0">
                                     <div class="d-flex flex-md-row flex-column align-items-md-center">
                                         <div class="mx-auto col-md-4">
-                                            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_qkeaard3.json" background="transparent" speed="1" style="width: 200px; height: 100%;" loop autoplay></lottie-player>
+                                            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_qkeaard3.json" background="transparent" speed="1" style="width: 200px; height: 100%;" loop autoplay>
+                                            </lottie-player>
                                         </div>
                                         <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">The metaverse is coming, and what better way to prepare for it than to look at all the possibilities. Future proof your technology by adapting to a more interactive medium.</p>
+                                            <p class="mb-0 py-3 py-md-0">The metaverse is coming, and what better way to prepare for it than to look at all the possibilities. Future proof your technology by adapting to a more interactive medium.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -548,10 +571,12 @@
                                 <div class="accordion-body pt-0">
                                     <div class="d-flex flex-md-row flex-column align-items-md-center">
                                         <div class="mx-auto col-md-4">
-                                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_pxigjnix.json" background="transparent" speed="1" style="width: 200px; height: 100%;" loop autoplay></lottie-player>
+                                            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_pxigjnix.json" background="transparent" speed="1" style="width: 200px; height: 100%;" loop autoplay>
+                                            </lottie-player>
                                         </div>
                                         <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">Run your operation at peak efficiency by using synthetic data to find areas of improvement. See gains in repetitive tasks like those on assembly lines or surgery rooms.</p>
+                                            <p class="mb-0 py-3 py-md-0">Run your operation at peak efficiency by using synthetic data to find areas of improvement. See gains in repetitive tasks like those on assembly lines or surgery rooms.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -595,18 +620,41 @@
         </section>
 
 
-        <!-- Services -->
+        <!-- API -->
+        <section class="container mb-5">
+            <div class="bg-secondary rounded-3 overflow-hidden">
+                <div class="row align-items-center">
+                    <div class="col-xl-4 col-md-5 offset-lg-1">
+                        <div class="pt-5 pb-3 pb-md-5 px-4 px-lg-0 text-center text-md-start">
+                            <p class="lead mb-4">Coming soon</p>
+                            <h2 class="h1"> InfiniteRep <span class="text-gradient-primary">API</span></h2>
+                            <p class="pb-3 pb-sm-4">Customize lighting, positioning, and more to tailor the dataset to your application.</p>
+                            <a href="#" class="btn btn-primary btn-lg">Join the waitlist</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-7 offset-xl-1">
+                        <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100">
+                            <svg class="d-none d-md-block position-absolute top-50 start-0 translate-middle-y" width="868" height="868" style="min-width: 868px;" viewBox="0 0 868 868" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.15" cx="434" cy="434" r="434" fill="#6366F1"/></svg>
+                            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_nqm7qhag.json" background="transparent" speed="1" style="width: 20;" loop autoplay></lottie-player>
+                            <!-- <img src="draft/assets/img/landing/api.png" class="position-relative zindex-3 mb-2 my-lg-4" width="382" alt="Illustration"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br>
+        </section>
+
+
+        <!-- Datasets -->
         <section class="pb-md-2 pb-lg-5">
             <div class="d-none d-lg-block" style="margin-top: -60px; padding-top: 60px;"></div>
             <div class="container pb-4 pt-5">
                 <h2 class="h1 text-center mb-lg-4 pt-1 pt-md-4">Our datasets</h2>
                 <div class="row justify-content-center mb-lg-2">
                     <div class="col-md-8">
-                        <p class="fs-lg text-muted mb-md-0 text-center">Every dataset we publish is <span class="text-light">open source</span> for academic and commercial use.</p>
+                        <p class="fs-lg text-muted mb-md-0 text-center">Every dataset we publish is <span class="text-light">open
+                source</span> for academic and commercial use.</p>
                     </div>
-                    <!-- <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
-        <a href="services.html" class="btn btn-outline-primary btn-lg">See all services</a>
-      </div> -->
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 pt-3 mt-5">
 
@@ -621,12 +669,13 @@
                                     <span class="text-gradient-primary">InfiniteRep</span>
                                     <!-- <i class="bx bx-right-arrow-circle text-primary fs-2 ms-2"></i> -->
                                 </h1>
-                                <p class="fs-md text-body mb-0">Pixel perfect labelled videos for remote fitness and PT applications.</p>
+                                <p class="fs-md text-body mb-0">Pixel perfect labelled videos for remote fitness and PT applications.
+                                </p>
                                 <div class="col">
                                     <a href="https://toinfinity.ai/infiniterep" class="nav-link fw-bold px-0 pt-4 stretched-link">
-                Try it free
-                <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
-              </a>
+                    Try it free
+                    <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+                  </a>
                                 </div>
                             </div>
                         </div>
@@ -646,9 +695,9 @@
                                 <p class="fs-md text-body mb-0">Track human poses with realistic and diverse images.</p>
                                 <div class="col">
                                     <a href="https://pixelate.ai/InfiniteForm" class="nav-link fw-bold px-0 pt-4 stretched-link">
-                Try it free
-                <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
-              </a>
+                    Try it free
+                    <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+                  </a>
                                 </div>
                             </div>
                         </div>
@@ -658,6 +707,7 @@
             </div>
             <br><br><br><br>
         </section>
+
 
 
         <!-- Blog + Contact cta -->
@@ -677,13 +727,13 @@
                             <p class="fs-2 text-center text-lg-start mb-4">Published at the NeurIPS <br> Data-Centric AI Workshop</p>
                             <p class="pb-2 pb-lg-4 pb-xl-5 mb-3 text-center text-lg-start">Introducing InfiniteForm, our synthetic, minimal bias dataset for fitness applications.</p>
                             <a href="https://arxiv.org/abs/2110.01330" target="_blank" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
-                  Read paper
-                  <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
-                </a>
+                Read paper
+                <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+              </a>
                         </div>
 
 
-                        <div class="col-auto px-0 justify-content-center">
+                        <div class="col-auto mx-auto mx-lg-0 px-0 justify-content-center">
                             <div class="position-relative">
                                 <div class="position-relative overflow-hidden bg-gradient-primary rounded-3 zindex-5 py-5 px-4 p-sm-5">
                                     <span class="position-absolute top-0 start-0 w-100 h-100 bg-repeat-0 bg-position-center-end bg-size-cover" style="background-image: url(draft/assets/img/landing/paper-bg.png);"></span>
@@ -716,7 +766,8 @@
                                 <h3 class="h5">
                                     <a href="https://medium.com/infinity-ai/synthetic-data-for-computer-vision-closing-the-sim-to-real-gap-3c788ffe7916" target="_blank">Synthetic Data for Computer Vision: Closing the Sim-to-Real Gap</a>
                                 </h3>
-                                <span class="fs-sm text-muted">A common challenge that arises when using synthetic data is the sim-to-real gap.</span>
+                                <span class="fs-sm text-muted">A common challenge that arises when using synthetic data is the
+                  sim-to-real gap.</span>
                             </div>
                             <div class="card-footer py-4">
                                 <div class="d-inline-flex align-items-center position-relative me-3">
@@ -741,7 +792,8 @@
                                         <h3 class="h5">
                                             <a href="https://medium.com/infinity-ai/infiniteform-a-synthetic-minimal-bias-dataset-for-fitness-applications-346e69f35b81" target="_blank">InfiniteForm: a synthetic, minimal bias dataset for fitness applications</a>
                                         </h3>
-                                        <span class="fs-sm text-muted">With 60k images labeled with 9 unique image labels, InfiniteForm is the most comprehensive open-source fitness dataset available.</span>
+                                        <span class="fs-sm text-muted">With 60k images labeled with 9 unique image labels, InfiniteForm is
+                      the most comprehensive open-source fitness dataset available.</span>
                                         <hr class="my-4">
                                         <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
                                             <div class="d-flex align-items-center position-relative me-3">
@@ -766,9 +818,11 @@
                                 <div class="col-sm-7">
                                     <div class="card-body">
                                         <h3 class="h5">
-                                            <a href="https://medium.com/infinity-ai/fake-it-til-you-make-it-the-advantages-of-using-synthetic-data-in-computer-vision-models-e20987397345" target="_blank">Fake it ’til you make it — the advantages of using synthetic data in computer vision models?</a>
+                                            <a href="https://medium.com/infinity-ai/fake-it-til-you-make-it-the-advantages-of-using-synthetic-data-in-computer-vision-models-e20987397345" target="_blank">Fake it ’til you make it — the advantages of using synthetic data in computer
+                        vision models?</a>
                                         </h3>
-                                        <span class="fs-sm text-muted">An introduction to using synthetic data in computer vision models.</span>
+                                        <span class="fs-sm text-muted">An introduction to using synthetic data in computer vision
+                      models.</span>
                                         <hr class="my-4">
                                         <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
                                             <div class="d-flex align-items-center position-relative me-3">
@@ -816,7 +870,7 @@
     <footer class="footer mt-5 pt-5 pb-4 pb-lg-5">
         <div class="container text-center pt-lg-3">
             <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4 mx-0">
-                <img src="draft/assets/img/logo/infinity_full_logo.svg" class="me-2" width="350" alt="Infinity AI">
+                <img src="draft/assets/img/logo/infinity_full_logo.png" class="me-2" width="350" alt="Infinity AI">
             </div>
             <!-- <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
           <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
@@ -827,14 +881,14 @@
           <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
         </ul> -->
             <div class="d-flex justify-content-center pt-5 mt-lg-3">
+                <a href="https://github.com/toinfinityai" target="_blank" class="btn btn-icon btn-secondary btn-github mx-2">
+                    <i class="bx bxl-github"></i>
+                </a>
                 <a href="https://twitter.com/toinfinityai" target="_blank" class="btn btn-icon btn-secondary btn-twitter mx-2">
                     <i class="bx bxl-twitter"></i>
                 </a>
                 <a href="https://medium.com/infinity-ai" target="_blank" class="btn btn-icon btn-secondary btn-medium mx-2">
                     <i class="bx bxl-medium"></i>
-                </a>
-                <a href="https://www.instagram.com/toinfinityai/" target="_blank" class="btn btn-icon btn-secondary btn-instagram mx-2">
-                    <i class="bx bxl-instagram"></i>
                 </a>
                 <a href="https://www.youtube.com/channel/UCcp4XyLKD1-1XDWH1lh_njA" target="_blank" class="btn btn-icon btn-secondary btn-youtube mx-2">
                     <i class="bx bxl-youtube"></i>
