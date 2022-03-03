@@ -137,6 +137,7 @@
         }
     </style>
 
+
     <!-- Theme mode -->
     <!-- <script>
       let mode = window.localStorage.getItem('mode'),
@@ -173,6 +174,13 @@
             };
         })();
     </script>
+
+    <!-- typed.js font size -->
+    <style>
+        #typed {
+            font-size: 2rem;
+        }
+    </style>
 </head>
 
 
@@ -195,128 +203,11 @@
 
         <!-- Navbar -->
         <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-        <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
+        <header class="navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
             <div class="container px-3">
                 <a href="index.html" class="navbar-brand pe-3">
                     <img src="draft/assets/img/logo/infinity_full_logo.png" width="150" alt="Infinity AI">
-
                 </a>
-                <!-- <div id="navbarNav" class="offcanvas offcanvas-end">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
-                  <div class="dropdown-menu p-0">
-                    <div class="d-lg-flex">
-                      <div class="mega-dropdown-column bg-position-center bg-repeat-0 bg-size-cover rounded-3 rounded-end-0" style="background-image: url(draft/assets/img/landings.jpg); margin: -1px;"></div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
-                          <li><a href="landing-mobile-app-showcase.html" class="dropdown-item">Mobile App Showcase</a></li>
-                          <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
-                          <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
-                          <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
-                          <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
-                          <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
-                          <li><a href="landing-software-company.html" class="dropdown-item">IT (Software) Company</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
-                        <ul class="list-unstyled mb-0">
-                          <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
-                          <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
-                          <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                  <div class="dropdown-menu">
-                    <div class="d-lg-flex pt-lg-3">
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">About</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
-                          <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Portfolio</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
-                          <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
-                          <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
-                          <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
-                          <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
-                          <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">Blog</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
-                          <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
-                          <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
-                          <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
-                          <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
-                          <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
-                          <li><a href="blog-podcast.hml" class="dropdown-item py-1">Podcast</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Services</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="services.html" class="dropdown-item py-1">Services Page</a></li>
-                          <li><a href="services-single.html" class="dropdown-item py-1">Service Details</a></li>
-                        </ul>
-                      </div>
-                      <div class="mega-dropdown-column">
-                        <h6 class="px-3 mb-2">Contacts</h6>
-                        <ul class="list-unstyled mb-3">
-                          <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
-                          <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
-                        </ul>
-                        <h6 class="px-3 mb-2">Specialty</h6>
-                        <ul class="list-unstyled">
-                          <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
-                          <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
-                    <li><a href="account-security.html" class="dropdown-item">Security</a></li>
-                    <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
-                    <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
-                    <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
-                    <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
-                    <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
-                    <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
-                    <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a href="components/typography.html" class="nav-link">UI Kit</a>
-                </li>
-                <li class="nav-item">
-                  <a href="docs/getting-started.html" class="nav-link">Docs</a>
-                </li>
-              </ul>
-            </div>
-            <div class="offcanvas-footer border-top">
-              <a href="#" class="btn btn-primary w-100">
-                <i class="bx bx-cart fs-4 lh-1 me-1"></i>
-                &nbsp;Buy now
-              </a>
-            </div>
-          </div> -->
-
 
                 <!-- dark mode tooggle -->
                 <div class="invisible form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
@@ -326,12 +217,62 @@
                 </div>
 
 
+                <div id="navbarNav" class="offcanvas offcanvas-end align-items-md-end">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fw-light">Infinity AI</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="infiniterep.html" class="dropdown-item">InfiniteRep</a></li>
+                                    <li><a href="https://github.com/toinfinityai/infiniteform#" class="dropdown-item" target="blank">InfiniteForm</a></li>
+                                    <li><a href="account-notifications.html" class="dropdown-item">Infinity API</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://github.com/toinfinityai" target="blank" class="dropdown-item">Documentation</a></li>
+                                    <li><a href="https://medium.com/infinity-ai" target="blank" class="dropdown-item">Blog</a></li>
+                                    <li><a href="#" target="blank" class="dropdown-item">Careers</a></li>
+                                    <li><a href="#" class="dropdown-item">About us</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a href="#" class="nav-link">Docs</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="offcanvas-footer border-top">
+                        <a href="mailto:info@toinfinity.ai" class="btn btn-primary w-100">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+
+
+
                 <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-                <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
-          Learn more
-        </a>
+                    <span class="navbar-toggler-icon"></span>
+                   </button>
+
+
+                <!-- dark mode tooggle -->
+                <!-- <div class="invisible form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                        <input type="checkbox" checked class="form-check-input" id="theme-mode">
+                        <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                        <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+                    </div> -->
+
+                <!-- Learn more button -->
+                <div style="margin-left: 12px;">
+                    <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+                     Learn more
+                    </a>
+                </div>
             </div>
         </header>
 
@@ -340,24 +281,32 @@
         <section class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5 px-md-4" style="background-image: url(draft/assets/img/landing/hero-bg.svg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
             <div class="container position-relative zindex-5 py-5">
                 <div class="row justify-content-md-start justify-content-center">
-                    <div class="col-xl-6 col-lg-7 col-sm-10 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+                    <div class="col-sm-10 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-start">
                         <div class="mb-md-5 pb-xl-5 mb-4">
 
 
                             <!-- Text -->
-                            <h1 class="display-2 mb-md-5 mb-3 pb-3">
+                            <!-- <h1 class="display-2 mb-md-5 mb-3 pb-3">
                                 Synthetic data built to <span class="text-gradient-primary">your</span> spec
-                            </h1>
-                            <p class="fs-5 mb-4">Infinity AI enables computer vision teams to build better, debug faster, and prototype at the click of a button.</p>
-                            <a href="mailto:info@toinfinity.ai" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Work with us</a>
+                            </h1> -->
+
+                            <!-- <h1 class="display-2 mb-0">We help you</h1>
+                            <span id="typedTitle" class="display-2 text-gradient-primary"></span> -->
+
+                            <h1 class="display-3 mb-0">Build AI models <span id="typedTitle2" class="display-3 text-gradient-primary"></span></h1>
+                            <h1 class="display-3 mb-md-5 mb-3 pb-3">with synthetic data.</h1>
+
+                            <!-- <p class="fs-5 mb-4 mt-3 pt-4">Build better AI models faster with synthetic data.</p> -->
+                            <a href="mailto:info@toinfinity.ai" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Subscribe</a>
                         </div>
+
+
 
                         <!-- Scroll down btn -->
                         <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
                             <a href="#start" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3">
                                 <i class="bx bx-chevron-down"></i>
                             </a>
-                            <span class="fs-sm">Discover more</span>
                         </div>
                     </div>
 
@@ -400,10 +349,11 @@
                             <!-- Item -->
                             <div class="swiper-slide" data-swiper-tab="#industry-1">
                                 <h3 class="h4 mb-4">
-                                    Minimizes data bias
+                                    Infinite variation
                                 </h3>
-                                <p>Infinite AI synthetic data enables complete control over distributions of data, including body shape, skin tone, and presenting gender, ensuring models with minimal bias. <br><br> Our first open-source dataset for remote
-                                    fitness applications, InfiniteForm, was born out of our goal to make remote fitness a more inclusive experience that works accurately across all body shapes and skin tones.</p>
+                                <p>An ML model is only as good as the data it is trained on, and diverse training data leads to robust production-level models. Our parameterized generators enable complete control over synthetic data distributions, including
+                                    body shape, skin tone, lighting conditions, camera angles, and more. <br><br> Minimize bias. Ensure privacy. Ship production models with confidence.
+                                </p>
                                 <a href="#" class="nav-link justify-content-start fw-bold p-0">
                   Discover InfiniteForm
                   <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
@@ -413,24 +363,24 @@
                             <!-- Item -->
                             <div class="swiper-slide" data-swiper-tab="#industry-2">
                                 <h3 class="h4 mb-4">
-                                    Provides unlimited labels
+                                    Infinite labels
                                 </h3>
-                                <p>Infinity AI synthetic data comes with pixel-perfect labels that might be hard or even impossible to get via manual annotations. Labels can include semantic segmentation, 2D and 3D keypoints, bounding boxes, 3D cuboids,
-                                    depth, surface normals, camera position, objects attributes (e.g. human body dimensions), and more.
+                                <p>All synthetic data comes with pixel-perfect labels that might be hard or even impossible to get via manual annotations. Labels can include semantic segmentation, 2D/3D keypoints, bounding boxes, activity classification,
+                                    joint angles, depth, surface normals, scene metadata, object attributes (e.g. human body dimensions), and much more.
                                 </p>
                             </div>
 
                             <!-- Item -->
                             <div class="swiper-slide" data-swiper-tab="#industry-3">
                                 <h3 class="h4 mb-4">
-                                    Enables rapid iteration
+                                    Data-centric AI development
                                 </h3>
-                                <p>Hypotheses can be tested using synthetic images instead of waiting for real-world data. This enables tailoring of models to specific applications and can result in better model performance. <br><br> Rapid iteration enabled
-                                    our team to build a pose estimation model that outperformed Google's BlazePose model!</p>
-                                <a href="#" class="nav-link justify-content-start fw-bold p-0">
-                  Check out the results
-                  <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
-                </a>
+                                <p>Working with synthetic data is an infinitely better experience for ML engineers than collecting and labeling real-world data. Iterate quickly. Debug at the click of a button. And get real results fast. Never be blocked
+                                    by lack of data again. Synthetic data empowers engineers with the data to solve any ML problem. </p>
+                                <!-- <a href="https://medium.com/edge-analytics/to-infinity-and-beyond-generating-infinite-training-data-for-computer-vision-8893e438b7ac" class="nav-link justify-content-start fw-bold p-0">
+                                Check out the results
+                                <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
+                                </a> -->
                             </div>
                         </div>
                     </div>
@@ -477,15 +427,14 @@
             <div class="card border-0 bg-secondary p-md-5 px-sm-2 pt-4 pb-3">
                 <div class="card-body mx-auto" style="max-width: 772px;">
                     <h2 class="h1 mb-4 text-center">Infinite use cases</h2>
-                    <p class="mb-4 pb-3 fs-lg text-center text-muted">We work with world-class ML teams on cutting edge problems across many applications.</p>
-
+                    <p class="mb-4 pb-3 fs-lg text-center text-muted">World-class ML teams use synthetic data across many application areas.</p>
                     <!-- Accordion: Alternative style -->
                     <div class="accordion" id="accordion-services">
 
                         <!-- Item -->
                         <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                             <h3 class="accordion-header" id="heading-1">
-                                <button class="accordion-button fs-xl shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Remote Fitness</button>
+                                <button class="accordion-button fs-xl shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Remote Fitness & Physical Therapy</button>
                             </h3>
                             <div class="accordion-collapse collapse show" id="collapse-1" aria-labelledby="heading-1" data-bs-parent="#accordion-services">
                                 <div class="accordion-body pt-0">
@@ -494,28 +443,8 @@
                                             <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_xy8qjnxc.json" background="transparent" speed="1" style="width: 200;" loop autoplay></lottie-player>
                                         </div>
                                         <div class="ps-md-3 pl-5 col-md-7">
-                                            <p class="mb-0 py-3 py-md-0">Ensure your users get the best workout possible from anywhere. By taking the real world into account, like bad lighting or lamp in the way, we enable accurate rep counting and form feedback.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
-                            <h3 class="accordion-header" id="heading-2">
-                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Safety & Ergonomics</button>
-                            </h3>
-                            <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
-                                <div class="accordion-body pt-0">
-                                    <div class="d-flex flex-md-row flex-column align-items-md-center">
-                                        <div class="mx-auto col-md-4">
-                                            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_sheanuio.json" background="transparent" speed="1" style="width: 200px; height: auto;" loop autoplay>
-                                            </lottie-player>
-                                        </div>
-                                        <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">Evaluate your working conditions to build the safest workspace possible. Provide workers the confidence in your plans because simulations were run in lifelike conditions.
-                                            </p>
+                                            <p class="mb-0 py-3 py-md-0">Synthetic data to train various exercise models from pose estimation to rep counting, form correction to activity classification. Datasets include poor lighting, challenging occlusions, low-contrast clothing,
+                                                and uncommon camera angles.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -525,7 +454,7 @@
                         <!-- Item -->
                         <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                             <h3 class="accordion-header" id="heading-3">
-                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">AR & VR</button>
+                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">AR / VR</button>
                             </h3>
                             <div class="accordion-collapse collapse" id="collapse-3" aria-labelledby="heading-3" data-bs-parent="#accordion-services">
                                 <div class="accordion-body pt-0">
@@ -535,7 +464,8 @@
                                             </lottie-player>
                                         </div>
                                         <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">The metaverse is coming, and what better way to prepare for it than to look at all the possibilities. Future proof your technology by adapting to a more interactive medium.
+                                            <p class="mb-0 py-3 py-md-0">Synthetic data to train AR and VR models ranging from hand pose estimation to people segmentation, gesture recognition to natural scene understanding. Datasets include messy backgrounds, grasping objects, complex
+                                                nails, and diverse wrist-worn accessories from an egocentric or third-person point of view.
                                             </p>
                                         </div>
                                     </div>
@@ -545,17 +475,41 @@
 
                         <!-- Item -->
                         <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                            <h3 class="accordion-header" id="heading-2">
+                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Warehouse and Factory Safety</button>
+                            </h3>
+                            <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
+                                <div class="accordion-body pt-0">
+                                    <div class="d-flex flex-md-row flex-column align-items-md-center">
+                                        <div class="mx-auto col-md-4">
+                                            <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_sheanuio.json" background="transparent" speed="1" style="width: 200px; height: auto;" loop autoplay>
+                                            </lottie-player>
+                                        </div>
+                                        <div class="ps-md-3">
+                                            <p class="mb-0 py-3 py-md-0">Synthetic data to train models related to warehouse safety including PPE detection (hard hats, safety vests, etc), ergonomics feedback, and aisle congestion monitoring. Import real-world objects (e.g. specific
+                                                PPE or assembly line products) into your simulated dataset.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Item -->
+                        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                             <h3 class="accordion-header" id="heading-4">
-                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">Physical Therapy</button>
+                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">Automated Stores</button>
                             </h3>
                             <div class="accordion-collapse collapse" id="collapse-4" aria-labelledby="heading-4" data-bs-parent="#accordion-services">
                                 <div class="accordion-body pt-0">
                                     <div class="d-flex flex-md-row flex-column align-items-md-center">
                                         <div class="mx-auto col-md-4">
-                                            <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ze1apkln.json" background="transparent" speed="1" style="width: 200px;" loop autoplay></lottie-player>
+                                            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_29afvmmn.json" background="transparent" speed="1" style="width: 200px;" loop autoplay></lottie-player>
                                         </div>
                                         <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">Recovery is difficult without the right guideance. Boost recovery training adherence by training models to recognize PT exercises remotely.</p>
+                                            <p class="mb-0 py-3 py-md-0">Synthetic data to train accurate pose estimation and object detection models for automated stores (like AmazonGo). Import specific store layouts, procedurally add inventory to shelves, include diverse shoppers,
+                                                and generate multi-camera views of a scene.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -565,7 +519,7 @@
                         <!-- Item -->
                         <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                             <h3 class="accordion-header" id="heading-5">
-                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">Human Optimization</button>
+                                <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">Residential and Enterprise Security</button>
                             </h3>
                             <div class="accordion-collapse collapse" id="collapse-5" aria-labelledby="heading-5" data-bs-parent="#accordion-services">
                                 <div class="accordion-body pt-0">
@@ -575,7 +529,7 @@
                                             </lottie-player>
                                         </div>
                                         <div class="ps-md-3">
-                                            <p class="mb-0 py-3 py-md-0">Run your operation at peak efficiency by using synthetic data to find areas of improvement. See gains in repetitive tasks like those on assembly lines or surgery rooms.
+                                            <p class="mb-0 py-3 py-md-0">Synthetic data to train models for residential or enterprise security applications, including package stealing, gun detection, shoplifting, and pet/animal identification.
                                             </p>
                                         </div>
                                     </div>
@@ -585,53 +539,83 @@
                     </div>
                 </div>
             </div>
+            <br><br><br>
         </section>
 
+        <!-- scoping session -->
+        <section class="container py-5 my-5 my-md-4 my-lg-5">
+            <div class="bg-dark border border-light rounded-3 py-5 px-4 px-sm-0">
+                <div class="row justify-content-center py-sm-2 py-lg-5 gap-5">
+                    <div class="col-auto">
+                        <img src="/draft/assets/img/landing/01.svg" alt="">
+                    </div>
+                    <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-start">
+                        <h2 class="h1 text-light mb-4">Want to make synthetic data your competitive edge?</h2>
+                        <p class="fs-lg text-light opacity-70 pb-4 mb-3">Get in touch with one of our engineers for a scoping session.</p>
 
-        <!-- Services -->
-        <section class="container py-5 my-2 my-md-4 my-lg-5">
-            <h2 class="h1 text-center pt-1 pt-xl-3 mb-5">What we can do for you</h2>
+                        <!-- Desktop form -->
+                        <form action="#" target="blank" class="input-group input-group-lg d-none d-sm-flex needs-validation mb-3" novalidate>
+                            <input type="email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                            <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                            <div class="invalid-feedback position-absolute top-100 start-0">Please provide a valid email address.</div>
+                            <button type="submit" class="btn btn-primary">Get in touch</button>
+                        </form>
 
-            <div class="row justify-content-center">
-                <!-- Item -->
-                <div class="h-auto py-3 col-12 col-md-5 col-lg-3">
-                    <div class="card h-100 card-body card-hover mx-2">
-                        <i class="bx bx-code-curly display-5 fw-normal card-icon"></i>
-                        <h3 class="h4 pt-3 pb-1 mb-2">Custom datasets</h3>
-                        <p class="mb-0">We build customized datasets to fit your needs.</p>
+                        <!-- Mobile form -->
+                        <form action="#" target="blank" class="needs-validation d-sm-none mb-3" novalidate>
+                            <div class="position-relative mb-3">
+                                <input type="email" class="form-control form-control-lg rounded-start ps-5" placeholder="Your email" required>
+                                <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                                <div class="invalid-feedback position-absolute top-0 start-0 mt-n4">Please provide a valid email address.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Get in touch</button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Item -->
-                <div class="h-auto py-3 col-12 col-md-3 col-lg-3">
-                    <div class="card h-100 card-body card-hover mx-2">
-                        <i class="bx bx-briefcase-alt display-5 fw-normal card-icon"></i>
-                        <h3 class="h4 pt-3 pb-1 mb-2">Consulting</h3>
-                        <p class="mb-0">We offer full-service consulting services for synthetic data integration.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="d-flex flex-column flex-sm-row justify-content-center pt-3 pt-sm-4">
-                <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-lg">Contact us</a>
             </div>
             <br><br><br>
         </section>
 
 
         <!-- API -->
-        <section class="container mb-5">
+        <section class="container my-5">
             <div class="bg-secondary rounded-3 overflow-hidden">
                 <div class="row align-items-center">
                     <div class="col-xl-4 col-md-5 offset-lg-1">
                         <div class="pt-5 pb-3 pb-md-5 px-4 px-lg-0 text-center text-md-start">
-                            <p class="lead mb-4">Coming soon</p>
-                            <h2 class="h1"> InfiniteRep <span class="text-gradient-primary">API</span></h2>
-                            <p class="pb-3 pb-sm-4">Customize lighting, positioning, and more to tailor the dataset to your application.</p>
-                            <a href="#" class="btn btn-primary btn-lg">Join the waitlist</a>
+                            <p class="lead mb-4">Data on demand</p>
+                            <h2 class="h1"> Infinity <span class="text-gradient-primary">API</span></h2>
+                            <p class="pb-3 pb-sm-4">Generate data that meets your specs from lighting conditions, camera position, and more. &nbsp; <a href="">Learn&nbsp;more -></a></p>
+                            <!-- <div class="d-grid gap-4 d-md-block">
+                                <a href="#" class="btn btn-primary btn-lg">Join the waitlist</a>
+                                <a href="#" class="btn btn-link btn-lg pl-3">Learn more</a>
+                            </div> -->
+
+                            <!-- Begin Mailchimp Signup Form -->
+                            <div id="mc_embed_signup">
+                                <!-- Desktop form -->
+                                <form action="#" target="blank" class="input-group input-group-lg d-none d-sm-flex needs-validation mb-3" novalidate>
+                                    <input type="email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                                    <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                                    <div class="invalid-feedback position-absolute top-100 start-0">Please provide a valid email address.</div>
+                                    <button type="submit" class="btn btn-primary">Join the waitlist</button>
+                                </form>
+
+                                <!-- Mobile form -->
+                                <form action="#" target="blank" class="needs-validation d-sm-none mb-3" novalidate>
+                                    <div class="position-relative mb-3">
+                                        <input type="email" class="form-control form-control-lg rounded-start ps-5" placeholder="Your email" required>
+                                        <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                                        <div class="invalid-feedback position-absolute top-0 start-0 mt-n4">Please provide a valid email address.</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">Join the waitlist</button>
+                                </form>
+                            </div>
+
                         </div>
                     </div>
+
+
                     <div class="col-lg-6 col-md-7 offset-xl-1">
                         <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100">
                             <svg class="d-none d-md-block position-absolute top-50 start-0 translate-middle-y" width="868" height="868" style="min-width: 868px;" viewBox="0 0 868 868" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity="0.15" cx="434" cy="434" r="434" fill="#6366F1"/></svg>
@@ -652,8 +636,8 @@
                 <h2 class="h1 text-center mb-lg-4 pt-1 pt-md-4">Our datasets</h2>
                 <div class="row justify-content-center mb-lg-2">
                     <div class="col-md-8">
-                        <p class="fs-lg text-muted mb-md-0 text-center">Every dataset we publish is <span class="text-light">open
-                source</span> for academic and commercial use.</p>
+                        <p class="fs-lg text-muted mb-md-0 text-center">Our <span class="text-light">open
+                source</span> datasets are available for both academic and commercial use.</p>
                     </div>
                 </div>
                 <div class="row row-cols-1 row-cols-md-2 pt-3 mt-5">
@@ -669,10 +653,10 @@
                                     <span class="text-gradient-primary">InfiniteRep</span>
                                     <!-- <i class="bx bx-right-arrow-circle text-primary fs-2 ms-2"></i> -->
                                 </h1>
-                                <p class="fs-md text-body mb-0">Pixel perfect labelled videos for remote fitness and PT applications.
+                                <p class="fs-md text-body mb-0">Videos of individual people doing multiple reps of exercises in home settings.
                                 </p>
                                 <div class="col">
-                                    <a href="https://toinfinity.ai/infiniterep" class="nav-link fw-bold px-0 pt-4 stretched-link">
+                                    <a href="infiniterep.html" class="nav-link fw-bold px-0 pt-4 stretched-link">
                     Try it free
                     <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
                   </a>
@@ -692,9 +676,9 @@
                                     <span class="text-gradient-secondary">InfiniteForm</span>
                                     <!-- <i class="bx bx-right-arrow-circle text-primary fs-3 ms-2"></i> -->
                                 </h2>
-                                <p class="fs-md text-body mb-0">Track human poses with realistic and diverse images.</p>
+                                <p class="fs-md text-body mb-0">Images of multiple people in various exercise poses in outdoor settings.</p>
                                 <div class="col">
-                                    <a href="https://pixelate.ai/InfiniteForm" class="nav-link fw-bold px-0 pt-4 stretched-link">
+                                    <a href="https://github.com/toinfinityai/infiniteform#" target="blank" class="nav-link fw-bold px-0 pt-4 stretched-link">
                     Try it free
                     <i class="bx bx-right-arrow-alt text-primary fs-4 fw-normal ms-2 mt-1"></i>
                   </a>
@@ -843,44 +827,125 @@
                     </div>
                 </div>
             </section>
+        </div>
 
-            <br><br><br><br><br>
+        <br><br><br><br><br>
 
-            <!-- Contact CTA -->
-            <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
-                <div class="card border-0 bg-gradient-primary">
-                    <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(draft/assets/img/landing/contact-bg.png);">
-                        <div class="py-md-5 py-4 text-center">
-                            <h3 class="h3 fw-medium text-light">Want us to put synthetic data to work for you?</h3>
-                            <div class="pt-md-5 pt-4 pb-md-2">
-                                <a href="mailto:info@toinfinity.ai" class="btn btn-lg btn-light">Contact us</a>
-                            </div>
+        <!-- Contact CTA -->
+        <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
+            <div class="card border-0 bg-gradient-primary">
+                <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(draft/assets/img/landing/contact-bg.png);">
+                    <div class="py-md-5 py-4 text-center">
+                        <h3 class="h3 fw-semibold text-light">Make synthetic data your competitive edge.</h3>
+
+                        <!-- <div class="pt-md-5 pt-4 pb-md-2">
+                            <a href="mailto:info@toinfinity.ai" class="btn btn-lg btn-light">Contact us</a>
+                        </div> -->
+
+
+
+                        <!-- form -->
+                        <div class="position-relative align-self-center pt-4 pb-3">
+                            <form action="mailto:info@toinfinity.ai" class="col-lg-6 col-md-7 offset-xl-1 needs-validation mx-auto text-start" novalidate>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-4">
+                                        <label for="name" class="form-label fs-base">Name</label>
+                                        <input type="text" id="name" class="form-control form-control-lg bg-white opacity-75" style="color:black" required>
+                                        <div class="invalid-feedback">Please enter your name.</div>
+                                    </div>
+                                    <div class="col-sm-6 mb-4">
+                                        <label for="email" class="form-label fs-base">Email</label>
+                                        <input type="email" id="email" class="form-control form-control-lg bg-white opacity-75" style="color:black" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                    <div class="col-12 pb-2 mb-4">
+                                        <label for="message" class="form-label fs-base">Message</label>
+                                        <textarea id="message" class="form-control form-control-lg bg-white opacity-75" rows="4" style="color:black" required></textarea>
+                                        <div class="invalid-feedback">Please enter your message.</div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-light btn-lg">Contact us</button>
+                            </form>
+                        </div>
+
+                        <!-- Pattern -->
+                        <div class="position-absolute end-0 bottom-0 text-primary">
+                            <svg width="416" height="444" viewBox="0 0 416 444" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M240.875 615.746C389.471 695.311 562.783 640.474 631.69 504.818C700.597 369.163 645.201 191.864 496.604 112.299C348.007 32.7335 174.696 87.5709 105.789 223.227C36.8815 358.882 92.278 536.18 240.875 615.746ZM208.043 680.381C388.035 776.757 605.894 713.247 694.644 538.527C783.394 363.807 709.428 144.04 529.436 47.6636C349.443 -48.7125 131.584 14.7978 42.8343 189.518C-45.916 364.238 28.0504 584.005 208.043 680.381Z" fill="currentColor"/><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M262.68 572.818C382.909 637.194 526.686 594.13 584.805 479.713C642.924 365.295 595.028 219.601 474.799 155.224C354.57 90.8479 210.793 133.912 152.674 248.33C94.5545 362.747 142.45 508.442 262.68 572.818ZM253.924 590.054C382.526 658.913 538.182 613.536 601.593 488.702C665.004 363.867 612.156 206.847 483.554 137.988C354.953 69.129 199.296 114.506 135.886 239.341C72.4752 364.175 125.323 521.195 253.924 590.054Z" fill="currentColor"/></svg>
                         </div>
                     </div>
+
                 </div>
-                <br><br>
-            </section>
-        </div>
+            </div>
+            <br><br>
+        </section>
 
 
     </main>
 
 
     <!-- Footer -->
-    <footer class="footer mt-5 pt-5 pb-4 pb-lg-5">
+    <footer class="footer mt-5 pt-5 pb-4 pb-lg-5 border-top border-light">
         <div class="container text-center pt-lg-3">
             <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4 mx-0">
-                <img src="draft/assets/img/logo/infinity_full_logo.png" class="me-2" width="350" alt="Infinity AI">
+                <img src="draft/assets/img/logo/infinity_full_logo.png" class="me-2" width="300" alt="Infinity AI">
             </div>
-            <!-- <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
-          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
-        </ul> -->
-            <div class="d-flex justify-content-center pt-5 mt-lg-3">
+
+
+            <div class="row text-start justify-content-center gap-5 mt-5">
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Products</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="infiniterep.html" class="font-normal text-dark opacity-80" style="text-decoration: none;">InfiniteRep</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://github.com/toinfinityai/infiniteform#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">InfiniteForm</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Infinity API</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Resources</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://github.com/toinfinityai" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Documentation</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://medium.com/infinity-ai" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Blog</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="#" class="font-normal text-dark opacity-80" style="text-decoration: none;">Careers</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">About us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Contact us</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="mailto:info@toinfinity.ai" class="font-normal text-dark opacity-80" style="text-decoration: none;">info@toinfinity.ai</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
+
+            <!-- socials -->
+            <div class="d-flex justify-content-center pt-4 mt-lg-3">
                 <a href="https://github.com/toinfinityai" target="_blank" class="btn btn-icon btn-secondary btn-github mx-2">
                     <i class="bx bxl-github"></i>
                 </a>
@@ -890,16 +955,27 @@
                 <a href="https://medium.com/infinity-ai" target="_blank" class="btn btn-icon btn-secondary btn-medium mx-2">
                     <i class="bx bxl-medium"></i>
                 </a>
+                <a href="https://www.linkedin.com/company/infinityai/" target="_blank" class="btn btn-icon btn-secondary btn-linkedin mx-2">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
                 <a href="https://www.youtube.com/channel/UCcp4XyLKD1-1XDWH1lh_njA" target="_blank" class="btn btn-icon btn-secondary btn-youtube mx-2">
                     <i class="bx bxl-youtube"></i>
                 </a>
             </div>
-            <p class="fs-sm text-center pt-5 mt-lg-4 mb-0 opacity-80">
-                Made by ML engineers for ML engineers ♥
-            </p>
-            <p class="fs-sm text-center mt-lg-4 mb-0 opacity-80">
-                © Infinity AI, Inc. 2022. All Rights Reserved.
-            </p>
+
+
+            <div class="row pt-5 mt-lg-4 justify-content-center">
+                <div class="col-auto">
+                    <p class="fs-sm text-center opacity-80 pb-1">
+                        Made by ML engineers for ML engineers ♥
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <p class="fs-sm text-center opacity-80">
+                        © Infinity AI, Inc. 2022. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -912,6 +988,41 @@
 
     <!-- Vendor Scripts -->
     <script src="draft/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <!-- Typed text (animated typing effect)-->
+    <script src="draft/assets/vendor/typed/typed.min.js"></script>
+    <script>
+        var typed = new Typed('#typedTitle', {
+            strings: ["build better.", "debug faster."],
+            loop: true,
+            showCursor: true,
+            cursorChar: "&nbsp",
+            backSpeed: 20,
+            typeSpeed: 55,
+            backDelay: 900,
+            // startDelay: 800,
+
+        });
+    </script>
+    <!-- Typed text (animated typing effect)-->
+    <script src="draft/assets/vendor/typed/typed.min.js"></script>
+    <script>
+        var typed = new Typed('#typedTitle2', {
+            strings: ["better", "faster"],
+            loop: true,
+            showCursor: true,
+            cursorChar: "&nbsp",
+            backSpeed: 20,
+            typeSpeed: 55,
+            backDelay: 900,
+            // startDelay: 800,
+
+        });
+    </script>
+    <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+    <script src="draft/assets/vendor/typed/scrollMonitor.js"></script>
+
     <script src="draft/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="draft/assets/vendor/jarallax/dist/jarallax.min.js"></script>
     <script src="draft/assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
