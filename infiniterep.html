@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Infinity AI</title>
     <link rel="icon" type="image/x-icon" href="assets/additions/logo/logo_mark.svg" />
@@ -12,34 +12,38 @@
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
 
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9RQE0B9RT"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-      gtag('config', 'G-P9RQE0B9RT');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P9RQE0B9RT');
     </script>
 
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="loader">
-      <div class="loading-animation"></div>
+        <div class="loading-animation"></div>
     </div>
 
     <div class="navbar-container">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary-3 py-2" data-sticky="top">
-        <div class="container">
-          <a class="navbar-brand fade-page" href="/">
-            <img src="assets/additions/logo/full_logo_beside.png" style="height: 2.7rem" alt="Infinity AI">
-          </a>
-          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary-3 py-2" data-sticky="top">
+            <div class="container">
+                <a class="navbar-brand fade-page" href="/">
+                    <img src="draft/assets/img/logo/infinity_full_logo.png" width="150" alt="Infinity AI">
+                </a>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
             <img class="icon svg navbar-toggler-open" src="assets/interface/menu.svg" alt="menu interface icon" data-inject-svg />
             <img class="icon navbar-toggler-close" src="assets/interface/cross.svg" alt="cross interface icon" data-inject-svg />
           </button> -->
-          <!-- <div class="collapse navbar-collapse justify-content-end">
+                <!-- <div class="collapse navbar-collapse justify-content-end">
             <div class="py-2 py-lg-0">
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
@@ -55,7 +59,7 @@
             </div><a href="#" class="btn btn-primary ml-lg-3">Download dataset</a>
 
           </div> -->
-          <!-- <div id="mc_embed_signup">
+                <!-- <div id="mc_embed_signup">
             <form action="https://edgeanalytics.us7.list-manage.com/subscribe/post?u=a3101fc4281281b0ade96228e&amp;id=94f8419593" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a3101fc4281281b0ade96228e_94f8419593" tabindex="-1" value=""></div>
@@ -63,416 +67,469 @@
                 </div>
             </form>
             </div> -->
-        </div>
-      </nav>
+            </div>
+        </nav>
     </div>
 
     <section class="bg-primary-3 text-light">
-      <div class="container">
-        <div class="row">
-          <h1 class="display-4-gr-0 col-auto">InfiniteRep</h1>
-        </div>
-          <div class="row col-xl-12 col-lg-8 col-md-9">
-            <p class="lead font-weight-light">An open-source synthetic dataset for remote fitness and remote PT applications. </p>
-            <br>
-          </div>
-
-          <div class="row mt-3">
-            <div class="col-md-auto">
-              <a class="btn btn-lg btn-block btn-primary" href="http://eepurl.com/hTnH3L" target="_blank">Download dataset</a>
+        <div class="container">
+            <div class="row">
+                <h1 class="display-4-gr-0 col-auto">InfiniteRep</h1>
+            </div>
+            <div class="row col-xl-12 col-lg-8 col-md-9">
+                <p class="lead font-weight-light">An open-source synthetic dataset for remote fitness and remote PT applications. </p>
+                <br>
             </div>
 
-            <div class="col-md-auto pr-md-0">
-              <a class="btn btn-lg btn-block btn-link mt-4 mt-md-0" href="https://github.com/toinfinityai/InfiniteRep" target="_blank">GitHub resources</a>
-            </div>
+            <div class="row mt-3">
+                <div class="col-md-auto">
+                    <a class="btn btn-lg btn-block btn-primary" href="http://eepurl.com/hTnH3L" target="_blank">Download dataset</a>
+                </div>
 
-            <!-- <div class="col-md-auto pl-md-0">
+                <div class="col-md-auto pr-md-0">
+                    <a class="btn btn-lg btn-block btn-link mt-4 mt-md-0" href="https://github.com/toinfinityai/InfiniteRep" target="_blank">GitHub resources</a>
+                </div>
+
+                <!-- <div class="col-md-auto pl-md-0">
               <a href="https://medium.com/infinity-ai/infiniterep-an-open-source-synthetic-dataset-for-remote-fitness-and-pt-applications-906946643e74" class="btn btn-lg btn-block btn-link mt-3 mt-md-0" target="_blank"> Read blog post</a>
             </div> -->
 
-          </div>
+            </div>
 
         </div>
-      </div>
+        </div>
     </section>
 
     <section class="justify-content-center align-items-center">
         <div class="row mb-5 text-center">
-          <div class="col">
-            <h4 class="text-primary font-weight-light">Build better models faster.</h4>
-            <span class="h1" data-typed-text="" data-show-cursor="true" data-cursor-char="&nbsp" data-loop="true" data-type-speed="55" data-back-speed="20" data-fade-out="false" data-smart-backspace="false" data-strings="[&quot;Rep counting&quot;,&quot;Pose estimation&quot;,&quot;Form correction&quot;,&quot;Occlusion detection&quot;,&quot;Segmentation &quot;,&quot;Activity classification&quot;,&quot;And much more.&quot;]"></span>
-          </div>
+            <div class="col">
+                <h4 class="text-primary font-weight-light">Build better models faster.</h4>
+                <span class="h1" data-typed-text="" data-show-cursor="true" data-cursor-char="&nbsp" data-loop="true" data-type-speed="55" data-back-speed="20" data-fade-out="false" data-smart-backspace="false" data-strings="[&quot;Rep counting&quot;,&quot;Pose estimation&quot;,&quot;Form correction&quot;,&quot;Occlusion detection&quot;,&quot;Segmentation &quot;,&quot;Activity classification&quot;,&quot;And much more.&quot;]"></span>
+            </div>
         </div>
 
-      <div class="container h-150 col-xl-8 col-md-10 col-lg-8">
-        <center>
-          <video loop autoplay muted class="rounded" style="width:100%; height:auto">
+        <div class="container h-150 col-xl-8 col-md-10 col-lg-8">
+            <center>
+                <video loop autoplay muted class="rounded" style="width:100%; height:auto">
             <source src="assets/additions/repset-page/grid_top.mp4" type="video/mp4">
             </video>
-        </center>
-      </div>
+            </center>
+        </div>
     </section>
 
     <section style="background-color:#F7F7F7">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-3">
-          <div class="col-xl-8 col-lg-9">
-            <h2 class="display-4 mb-5">Synthetic data. Real results.</h2>
-            <!-- <h2 class="display-4 mx-xl-6">The perfect vision dataset for fitness and PT applications</h2> -->
-            <p class="lead text-left">
-                InfiniteRep makes it easier for engineers to build vision-based products in remote fitness and PT.
-              <br><br>
+        <div class="container">
+            <div class="row justify-content-center text-center mb-3">
+                <div class="col-xl-8 col-lg-9">
+                    <h2 class="display-4 mb-5">Synthetic data. Real results.</h2>
+                    <!-- <h2 class="display-4 mx-xl-6">The perfect vision dataset for fitness and PT applications</h2> -->
+                    <p class="lead text-left">
+                        InfiniteRep makes it easier for engineers to build vision-based products in remote fitness and PT.
+                        <br><br> Designed to look like real-world videos collected by remote exercise companies, the InfiniteRep dataset seamlessly integrates into existing pipelines. Each video is accompanied by a rich set of pixel-perfect labels and
+                        annotations, including rep counts.
+                        <br>
 
-              Designed to look like real-world videos collected by remote exercise companies, the InfiniteRep dataset seamlessly integrates into existing pipelines. Each video is accompanied by a rich set of pixel-perfect labels and annotations, including rep counts.
-              <br>
-
-            </p>
-            <br>
-            <p class="lead text-left">It features: </p>
-            <ul class="list-unstyled text-left mb-0">
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                    </p>
+                    <br>
+                    <p class="lead text-left">It features: </p>
+                    <ul class="list-unstyled text-left mb-0">
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">1,000 videos (5-30 seconds each)</span>
-              </li>
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                        </li>
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">10 exercises</span>
-              </li>
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                        </li>
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">Lifelike rep behavior</span>
-              </li>
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                        </li>
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">7 indoor scenes</span>
-              </li>
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                        </li>
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">Diverse lighting conditions</span>
-              </li>
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                        </li>
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">Varied avatar body shape, skin tones, and clothing</span>
-              </li>
-              <li class="d-flex py-2">
-                <div class="icon-round icon-round-xs bg-primary mr-2">
-                  <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
-                </div>
-                <span>
+                        </li>
+                        <li class="d-flex py-2">
+                            <div class="icon-round icon-round-xs bg-primary mr-2">
+                                <img class="icon bg-primary" src="assets/interface/check.svg" alt="Checkmark icon" data-inject-svg />
+                            </div>
+                            <span>
                   <span class="lead">18 label and annotation types</span>
-              </li>
-            </ul>
-          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
 
 
     <section class="pb-1 mt-4">
-      <div class="container">
-        <div class="row justify-content-center mb-0">
-          <h4 class="text-primary font-weight-light"> DATASET FEATURES</h4>
-        </div>
-        <div class="row justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center mb-0">
+                <h4 class="text-primary font-weight-light"> DATASET FEATURES</h4>
+            </div>
+            <div class="row justify-content-center">
 
-          <h2 class="display-4-gr-1 mt-3 mx-xl-6 col-auto text-center">Lifelike rep behavior</h2>
-        </div>
+                <h2 class="display-4-gr-1 mt-3 mx-xl-6 col-auto text-center">Lifelike rep behavior</h2>
+            </div>
 
-        <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
-          <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
-            <!-- <img src="assets/additions/repset-page/kinematic_variation.gif" alt="Image"> -->
-            <video loop autoplay muted style="width:100%; height:auto">
+            <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
+                    <!-- <img src="assets/additions/repset-page/kinematic_variation.gif" alt="Image"> -->
+                    <video loop autoplay muted style="width:100%; height:auto">
               <source src="assets/additions/repset-page/kinematic_variation.mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h5>Each rep is done slightly differently.<br> Just like a real human.</h5>
-            <p class="lead">From cadence variation to varying kinematic trajectories, no two reps are done exactly the same way. We built in vast amounts of movement variation to enable you to train robust algorithms.
-            </p>
-            <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
-          </div>
-        </div>
+                </div>
+                <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
+                    <h5>Each rep is done slightly differently.<br> Just like a real human.</h5>
+                    <p class="lead">From cadence variation to varying kinematic trajectories, no two reps are done exactly the same way. We built in vast amounts of movement variation to enable you to train robust algorithms.
+                    </p>
+                    <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
+                </div>
+            </div>
 
-          <div class="row align-items-center justify-content-around o-hidden">
-            <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
-              <!-- <img src="assets/additions/repset-page/rpm_gif.gif" alt="Image"> --> 
-              <video loop autoplay muted style="width:100%; height:auto">
+            <div class="row align-items-center justify-content-around o-hidden">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
+                    <!-- <img src="assets/additions/repset-page/rpm_gif.gif" alt="Image"> -->
+                    <video loop autoplay muted style="width:100%; height:auto">
                 <source src="assets/additions/repset-page/cadence_variation.mp4" type="video/mp4">
               </video>
+                </div>
+                <div class="col-lg-5 col-md-6" data-aos="fade-left">
+                    <h5>Inspired by real people.</h5>
+                    <p class="lead">We used extensive real world movement data to model the unique intricacies of movement and produce realistic and robust training data.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-5 col-md-6" data-aos="fade-left">
-              <h5>Inspired by real people.</h5>
-              <p class="lead">We used extensive real world movement data to model the unique intricacies of movement and produce realistic and robust training data.
-              </p>
-            </div>
-          </div>
 
-      </div>
+        </div>
     </section>
 
 
 
     <section class="pb-1 mt-6">
-      <div class="container">
-          <div class="row justify-content-center">
-            <h2 class="display-4-gr-2 mx-xl-6 col-auto text-center">Robust exercise library</h2>
-          </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="display-4-gr-2 mx-xl-6 col-auto text-center">Robust exercise library</h2>
+            </div>
 
-        <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
-          <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
-            <!-- <img src="assets/additions/repset-page/exercises.gif" alt="Image"> -->
-            <video loop autoplay muted style="width:100%; height:auto">
+            <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
+                    <!-- <img src="assets/additions/repset-page/exercises.gif" alt="Image"> -->
+                    <video loop autoplay muted style="width:100%; height:auto">
               <source src="assets/additions/repset-page/exercises.mp4" type="video/mp4">
             </video>
-        </center>
-          </div>
-          <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h5>Choose from common exercises.</h5>
-            <p class="lead">The dataset includes 10 of the most common fitness and physical therapy (PT) exercises.
-            </p>
-            <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
-          </div>
+                    </center>
+                </div>
+                <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
+                    <h5>Choose from common exercises.</h5>
+                    <p class="lead">The dataset includes 10 of the most common fitness and physical therapy (PT) exercises.
+                    </p>
+                    <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
+                </div>
+            </div>
+
+
+
+            <div class="row align-items-center justify-content-around o-hidden">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="assets/additions/repset-page/elbow_to_knee_merged.gif" alt="Image">
+                </div>
+                <div class="col-lg-5 col-md-6" data-aos="fade-left">
+                    <h5>Or import any movement.</h5>
+                    <p class="lead">Generate synthetic videos from any movement. Leverage your own motion capture (Mo-Cap) data or just tell us the name of the exercise and we’ll take care of the rest.
+                    </p>
+                </div>
+            </div>
+
         </div>
-
-
-
-          <div class="row align-items-center justify-content-around o-hidden">
-            <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
-              <img src="assets/additions/repset-page/elbow_to_knee_merged.gif" alt="Image">
-            </div>
-            <div class="col-lg-5 col-md-6" data-aos="fade-left">
-              <h5>Or import any movement.</h5>
-              <p class="lead">Generate synthetic videos from any movement. Leverage your own motion capture (Mo-Cap) data or just tell us the name of the exercise and we’ll take care of the rest.
-              </p>
-            </div>
-          </div>
-
-      </div>
     </section>
 
 
     <section class="pb-1 mt-6">
-      <div class="container">
-        <div class="row justify-content-center">
-            <h2 class="display-4-gr-3 mx-xl-6 col-auto text-center">Infinite avatars and environments</h2>
-        </div>
-
-        <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
-          <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
-            <img src="assets/additions/repset-page/lighting.gif" alt="Image">
-          </div>
-          <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h5>Varied rooms, camera angles, and lighting conditions.</h5>
-            <p class="lead">The dataset includes 7 backgrounds of home settings with a range of lighting conditions and camera angles.
-            </p>
-            <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
-          </div>
-        </div>
-
-          <div class="row align-items-center justify-content-around o-hidden">
-            <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
-              <img src="assets/additions/repset-page/skin-tone.gif" alt="Image">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="display-4-gr-3 mx-xl-6 col-auto text-center">Infinite avatars and environments</h2>
             </div>
-            <div class="col-lg-5 col-md-6" data-aos="fade-left">
-              <h5>Diverse avatars for equitable and fair ML.</h5>
-              <p class="lead">Give everyone a great home fitness experience by designing for a range of skin tones, body types, and clothing. The dataset has a normal distribution of body-types and equal distribution of skin tones.
-              </p>
-            </div>
-          </div>
 
-      </div>
+            <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
+                    <img src="assets/additions/repset-page/lighting.gif" alt="Image">
+                </div>
+                <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
+                    <h5>Varied rooms, camera angles, and lighting conditions.</h5>
+                    <p class="lead">The dataset includes 7 backgrounds of home settings with a range of lighting conditions and camera angles.
+                    </p>
+                    <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-around o-hidden">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="assets/additions/repset-page/skin-tone.gif" alt="Image">
+                </div>
+                <div class="col-lg-5 col-md-6" data-aos="fade-left">
+                    <h5>Diverse avatars for equitable and fair ML.</h5>
+                    <p class="lead">Give everyone a great home fitness experience by designing for a range of skin tones, body types, and clothing. The dataset has a normal distribution of body-types and equal distribution of skin tones.
+                    </p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
 
 
     <section class="pb-1 mt-6">
-      <div class="container">
-        <div class="row justify-content-center">
-            <h2 class="display-4-gr-4 mx-xl-6 col-auto text-center">Detailed labels</h2>
-        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="display-4-gr-4 mx-xl-6 col-auto text-center">Detailed labels</h2>
+            </div>
 
-        <div class="row align-items-center justify-content-around o-hidden mt-6">
-          <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
-            <!-- <img src="assets/additions/repset-page/labels.gif" alt="Image"> --> 
-            <video loop autoplay muted style="width:100%; height:auto">
+            <div class="row align-items-center justify-content-around o-hidden mt-6">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-right">
+                    <!-- <img src="assets/additions/repset-page/labels.gif" alt="Image"> -->
+                    <video loop autoplay muted style="width:100%; height:auto">
               <source src="assets/additions/repset-page/labels.mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="col-lg-5 col-md-6" data-aos="fade-left">
-            <h5>Pixel-perfect labels and rich annotations.</h5>
-            <p class="lead">The dataset allows engineers to build rep counting models, pose estimation models, form-correction models, segmentation models, activity classification models, and much more.
-            </p>
-          </div>
-        </div>
+                </div>
+                <div class="col-lg-5 col-md-6" data-aos="fade-left">
+                    <h5>Pixel-perfect labels and rich annotations.</h5>
+                    <p class="lead">The dataset allows engineers to build rep counting models, pose estimation models, form-correction models, segmentation models, activity classification models, and much more.
+                    </p>
+                </div>
+            </div>
 
-      </div>
+        </div>
     </section>
 
 
     <section class="pb-1 mt-6">
-      <div class="container">
-        <div class="row justify-content-center">
-            <h2 class="display-4-gr-0 mx-xl-6 col-auto text-center">Open-source</h2>
-        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="display-4-gr-0 mx-xl-6 col-auto text-center">Open-source</h2>
+            </div>
 
-        <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
-          <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
-            <!-- <img src="assets/additions/repset-page/camera.gif" alt="Image"> -->
-            <video loop autoplay muted style="width:100%; height:auto">
+            <div class="row align-items-center justify-content-around flex-row-reverse o-hidden mt-6 mb-5 pb-5">
+                <div class="col-md-6 col-lg-5 mb-4 mb-md-0" data-aos="fade-left">
+                    <!-- <img src="assets/additions/repset-page/camera.gif" alt="Image"> -->
+                    <video loop autoplay muted style="width:100%; height:auto">
               <source src="assets/additions/repset-page/camera.mp4" type="video/mp4">
             </video>
-          </div>
-          <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
-            <h5>Build without limits.</h5>
-            <p class="lead">InfiniteRep is one of the few human-centric datasets that is available for both academic and commercial use.
-            </p>
-            <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
-          </div>
-        </div>
+                </div>
+                <div class="col-lg-5 col-md-6 text-md-right" data-aos="fade-right">
+                    <h5>Build without limits.</h5>
+                    <p class="lead">InfiniteRep is one of the few human-centric datasets that is available for both academic and commercial use.
+                    </p>
+                    <!-- <a href="#" class="lead hover-arrow">Start Discovering</a> -->
+                </div>
+            </div>
 
-      </div>
+        </div>
     </section>
 
 
 
     <section class="pb-1 mt-6" style="background-color:#F7F7F7">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-6">
-          <div class="col-xl-8 col-lg-9">
-            <h4 class="text-primary font-weight-light"> SYNTHETIC DATA AS A SERVICE</h4>
-            <h2 class="display-4 mx-xl-6">We're excited to hear from you.</h2>
-            <p class="lead text-left">
-              We’re a small team of dedicated engineers who built this dataset hoping it’d be useful to people like you!
-              <br><br>
-              <b>Has the dataset been useful?</b> We love hearing good things!
-              <br><br>
-              <b>Has the dataset not helped your model?</b> We’d love to help debug.
-              <br><br>
-              <b>Do you want a different dataset?</b> We specialize in generating custom synthetic data.
-              <br><br>
-              Drop us a line at <a href="mailto:info@toinfinity.ai">info@toinfinity.ai</a> (we read every email).
-            </p>
-            <br>
-          </div>
+        <div class="container">
+            <div class="row justify-content-center text-center mb-6">
+                <div class="col-xl-8 col-lg-9">
+                    <h4 class="text-primary font-weight-light"> SYNTHETIC DATA AS A SERVICE</h4>
+                    <h2 class="display-4 mx-xl-6">We're excited to hear from you.</h2>
+                    <p class="lead text-left">
+                        We’re a small team of dedicated engineers who built this dataset hoping it’d be useful to people like you!
+                        <br><br>
+                        <b>Has the dataset been useful?</b> We love hearing good things!
+                        <br><br>
+                        <b>Has the dataset not helped your model?</b> We’d love to help debug.
+                        <br><br>
+                        <b>Do you want a different dataset?</b> We specialize in generating custom synthetic data.
+                        <br><br> Drop us a line at <a href="mailto:info@toinfinity.ai">info@toinfinity.ai</a> (we read every email).
+                    </p>
+                    <br>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-      <section class="bg-primary-3 text-light">
+    <section class="bg-primary-3 text-light">
         <div class="container">
-          <div class="row">
-            <h1 class="display-4-gr-0 col-auto">InfiniteRep</h1>
-          </div>
+            <div class="row">
+                <h1 class="display-4-gr-0 col-auto">InfiniteRep</h1>
+            </div>
             <div class="row col-xl-12 col-lg-8 col-md-9">
-              <p class="lead font-weight-light">An open-source synthetic dataset for remote fitness and remote PT applications. </p>
-              <br>
+                <p class="lead font-weight-light">An open-source synthetic dataset for remote fitness and remote PT applications. </p>
+                <br>
             </div>
 
             <div class="row mt-3">
-              <div class="col-md-auto">
-                <a class="btn btn-lg btn-block btn-primary" href="http://eepurl.com/hTnH3L" target="_blank">Download dataset</a>
-              </div>
+                <div class="col-md-auto">
+                    <a class="btn btn-lg btn-block btn-primary" href="http://eepurl.com/hTnH3L" target="_blank">Download dataset</a>
+                </div>
 
-              <div class="col-md-auto pr-md-0">
-                <a class="btn btn-lg btn-block btn-link mt-4 mt-md-0" href="https://github.com/toinfinityai/InfiniteRep" target="_blank">GitHub resources</a>
-              </div>
+                <div class="col-md-auto pr-md-0">
+                    <a class="btn btn-lg btn-block btn-link mt-4 mt-md-0" href="https://github.com/toinfinityai/InfiniteRep" target="_blank">GitHub resources</a>
+                </div>
 
-              <div class="col-md-auto pl-md-0">
-                <a href="https://medium.com/infinity-ai/infiniterep-an-open-source-synthetic-dataset-for-remote-fitness-and-pt-applications-906946643e74" class="btn btn-lg btn-block btn-link mt-3 mt-md-0" target="_blank"> Read blog post</a>
-              </div>
+                <div class="col-md-auto pl-md-0">
+                    <a href="https://medium.com/infinity-ai/infiniterep-an-open-source-synthetic-dataset-for-remote-fitness-and-pt-applications-906946643e74" class="btn btn-lg btn-block btn-link mt-3 mt-md-0" target="_blank"> Read blog post</a>
+                </div>
 
             </div>
 
-          </div>
         </div>
-      </section>
+        </div>
+    </section>
+
+
 
 
 
     <footer class="pb-5 pt-2 bg-primary-2-alt text-light-3">
-      <div class="container">
-        <div class="row mb-1 mt-1 justify-content-center">
-          <div class="col-auto">
-            <a href="/">
-              <img src="assets/additions/logo/full_logo_beside.svg" alt="Infinity AI" class="icon" style="height: 15rem; width: 15rem">
-            </a>
-          </div>
-        </div>
-        <!-- <div class="row mb-4">
-          <div class="col">
-            <ul class="nav justify-content-center">
-              <li class="nav-item"><a href="#" class="nav-link">Demos</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Pages</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Blog</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Portfolio</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Elements</a>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-        <div class="row justify-content-center mt-1 mb-4">
-          <div class="col-auto">
-            <ul class="nav">
-              <li class="nav-item">
-                <a href="https://www.instagram.com/toinfinityai/" class="nav-link"  target="_blank" >
-                  <img class="icon" src="assets/social/instagram.svg" alt="instagram social icon"  />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://twitter.com/toinfinityai" class="nav-link"  target="_blank" >
-                  <img class="icon " src="assets/social/twitter.svg" alt="twitter social icon" />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.youtube.com/channel/UCcp4XyLKD1-1XDWH1lh_njA" class="nav-link"  target="_blank" >
-                  <img class="icon " src="assets/social/youtube.svg" alt="youtube social icon" />
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://medium.com/infinity-ai" class="nav-link" target="_blank" >
-                  <img class="icon " src="assets/social/medium.svg" alt="medium social icon" />
-                </a>
-              </li>
-              <!-- <li class="nav-item">
+        <div class="container">
+            <div class="row mb-1 mt-1 justify-content-center">
+                <div class="col-auto my-5">
+                    <a href="/">
+                        <img src="draft/assets/img/logo/infinity_full_logo_darkText.png" class="me-2" width="300" alt="Infinity AI">
+                        <!-- <img src="assets/additions/logo/full_logo_beside.svg" alt="Infinity AI" class="icon" style="height: 15rem; width: 15rem"> -->
+                    </a>
+                </div>
+            </div>
+
+            <div class="row text-start justify-content-center">
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Products</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="infiniterep" class="font-normal text-dark opacity-80" style="text-decoration: none;">InfiniteRep</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://github.com/toinfinityai/infiniteform#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">InfiniteForm</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="#API" class="font-normal text-dark opacity-80" style="text-decoration: none;">Infinity API</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+                <div class="col-auto px-5">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Resources</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://github.com/toinfinityai" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Documentation</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://medium.com/infinity-ai" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Blog</a>
+                            </li>
+                            <!-- <li class="mb-3 text-xs text-start">
+                        <a href="#" class="font-normal text-dark opacity-80" style="text-decoration: none;">Careers</a>
+                    </li>
+                    <li class="mb-3 text-xs text-start">
+                        <a href="#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">About us</a>
+                    </li> -->
+                        </ul>
+                    </li>
+                </div>
+
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Contact us</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="mailto:info@toinfinity.ai" class="font-normal text-dark opacity-80" style="text-decoration: none;">info@toinfinity.ai</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
+
+
+            <!-- socials -->
+            <div class="row justify-content-center mt-4 mb-4">
+                <div class="col-auto">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="https://github.com/toinfinityai" class="nav-link" target="_blank">
+                                <img class="icon" src="assets/social/github.svg" alt="github social icon" />
+                            </a>
+                        </li>
+                        <li cla <li class="nav-item">
+                            <a href="https://twitter.com/toinfinityai" class="nav-link" target="_blank">
+                                <img class="icon" src="assets/social/twitter.svg" alt="twitter social icon" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://medium.com/infinity-ai" class="nav-link" target="_blank">
+                                <img class="icon " src="assets/social/medium.svg" alt="medium social icon" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.linkedin.com/company/infinityai/" class="nav-link" target="_blank">
+                                <img class="icon " src="assets/social/linkedin.svg" alt="linkedin social icon" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.youtube.com/channel/UCcp4XyLKD1-1XDWH1lh_njA" class="nav-link" target="_blank">
+                                <img class="icon " src="assets/social/youtube.svg" alt="youtube social icon" />
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
                 <a href="#" class="nav-link">
                   <img class="icon " src="assets/img/icons/social/facebook.svg" alt="facebook social icon" data-inject-svg />
                 </a>
               </li> -->
-            </ul>
-          </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pt-5 mt-lg-4 justify-content-center text-center">
+                <div class="col-auto">
+                    <small class="text-muted pb-1">
+                        Made by ML engineers for ML engineers ♥
+                    </small>
+                </div>
+                <div class="col-auto">
+                    <small class="text-muted">
+                        © Infinity AI, Inc. 2022. All Rights Reserved.
+                    </small>
+                </div>
+            </div>
         </div>
-        <div class="row justify-content-center text-center">
-          <div class="col-xl-10">
-            <small class="text-muted">Made by ML engineers for ML engineers &#9829 <br>&copy; Infinity AI, Inc. 2022. All Rights Reserved. </small>
-          </div>
-        </div>
-      </div>
     </footer>
     <a href="#" class="btn back-to-top btn-primary btn-round" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
-      <img class="icon" src="assets/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
+        <img class="icon" src="assets/navigation/arrow-up.svg" alt="arrow-up icon" data-inject-svg />
     </a>
     <!-- Required vendor scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -521,9 +578,11 @@
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <!-- Removes page load animation when window is finished loading -->
     <script type="text/javascript">
-      window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
+        window.addEventListener("load", function() {
+            document.querySelector('body').classList.add('loaded');
+        });
     </script>
 
-  </body>
+</body>
 
 </html>
