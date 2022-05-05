@@ -11,6 +11,12 @@
     -webkit-text-fill-color: transparent
 }
 
+.text-gradient-secondary_reverse {
+    background: linear-gradient(to right, #4285F4, #8B5CF6, #4285F4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
