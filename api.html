@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Infinity API</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Infinity API">
+    <meta name="keywords" content="Ininfity, AI, synthetic data, api, computer vision, machine vision, machine learning, ML, data, fitness, remote fitness, AR, VR, MR, safety, ergonomics, human optimization, physical therapy, security">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="draft/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="draft/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="draft/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="draft/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="draft/assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="draft/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="draft/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="draft/assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="draft/assets/vendor/swiper/swiper-bundle.min.css" />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="draft/assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        
+        .dark-mode .page-loading {
+            background-color: #131022;
+        }
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+
+    <!-- Theme mode - add for dark mode -->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== undefined && mode === 'dark') {
+            root.classList.add('dark-mode');
+            mode = 'dark';
+        } else {
+            root.classList.remove('dark-mode');
+            mode = 'dark'
+        }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function() {
+            window.onload = function() {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+</head>
+
+
+<!-- Body -->
+
+<body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+        <!-- Navbar -->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+        <header class="header navbar navbar-expand-lg navbar-light navbar-sticky">
+            <div class="container px-3">
+                <a href="https://toinfinity.ai/" class="navbar-brand pe-3">
+                    <img src="draft/assets/img/logo/infinity_full_logo.png" width="150" alt="Infinity AI">
+                </a>
+
+                <!-- dark mode tooggle -->
+                <div class="invisible form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                    <input type="checkbox" checked class="form-check-input" id="theme-mode">
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+                </div>
+
+
+                <div id="navbarNav" class="offcanvas offcanvas-end align-items-lg-end">
+                    <div class="offcanvas-header border-bottom">
+                        <h5 class="offcanvas-title fw-light">Infinity AI</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="api" class="dropdown-item">Infinity API</a></li>
+                                    <li><a href="infiniterep" class="dropdown-item"><span class="opacity-75">Dataset: </span>InfiniteRep</a></li>
+                                    <!-- <li><a href="https://github.com/toinfinityai/infiniteform#" class="dropdown-item" target="blank">InfiniteForm</a></li> -->
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Resources</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://github.com/toinfinityai" target="blank" class="dropdown-item">Documentation</a></li>
+                                    <li><a href="https://medium.com/infinity-ai" target="blank" class="dropdown-item">Blog</a></li>
+                                    <!-- <li><a href="#" target="blank" class="dropdown-item">Careers</a></li>
+                                  <li><a href="#" class="dropdown-item">About us</a></li> -->
+                                </ul>
+                            </li>
+                            <!-- <li class="nav-item">
+                              <a href="#" class="nav-link">Docs</a>
+                          </li> -->
+                        </ul>
+                    </div>
+                    <div class="offcanvas-footer border-top">
+                        <!-- Mailchimp signup form -->
+                        <div id="mc_embed_signup">
+                            <form action="https://eepurl.com/hWom19" target="blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate needs-validation" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <div class="mc-field-group input-group">
+
+                                        <!-- submit button -->
+                                        <input type="submit" class="btn btn-primary w-100" value="Get in touch" name="subscribe" id="mc-embedded-subscribe">
+                                    </div>
+                                    <div id="mce-responses" class="clear foot">
+                                        <div class="response" id="mce-error-response" style="display:none"></div>
+                                        <div class="response" id="mce-success-response" style="display:none"></div>
+                                    </div>
+                                    <!-- do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e2cb2d14ccba66cede8d5bb54_cfe1437c41" tabindex="-1" value=""></div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- <a href="mailto:info@toinfinity.ai" class="btn btn-primary w-100">
+                          Contact us
+                      </a> -->
+                    </div>
+                </div>
+
+
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                 </button>
+
+
+                <!-- ***KEEP*** dark mode tooggle -->
+                <!-- <div class="invisible form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                      <input type="checkbox" checked class="form-check-input" id="theme-mode">
+                      <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                      <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+                  </div> -->
+
+                <!-- Nav CTA -->
+                <div style="margin-left: 12px;">
+                    <!-- Mailchimp signup form -->
+                    <div id="mc_embed_signup">
+                        <form action="https://eepurl.com/hWom19" target="blank" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate needs-validation" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <div class="mc-field-group input-group">
+
+                                    <!-- submit button -->
+                                    <input type="submit" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" value="Get in touch" name="subscribe" id="mc-embedded-subscribe">
+                                </div>
+                                <div id="mce-responses" class="clear foot">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>
+                                <!-- do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e2cb2d14ccba66cede8d5bb54_cfe1437c41" tabindex="-1" value=""></div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- <a href="mailto:info@toinfinity.ai" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+                   Contact us
+                  </a> -->
+                </div>
+            </div>
+        </header>
+
+
+
+        <!-- Hero -->
+        <section class="pt-lg-4 mt-lg-3">
+            <div class="position-relative overflow-hidden" style="min-height: 80vh;">
+
+                <!-- Card -->
+                <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3 order-1">
+                    <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+                        <div class="col-xl-6 col-lg-7">
+
+                            <!-- Card -->
+                            <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4 mt-3 mt-md-0">
+                                <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                                <div class="card-body position-relative zindex-5">
+                                    <h1 class="display-5 text-light pb-3 mb-3">The Infinity <span class="text-gradient-primary">API</span></h1>
+                                    <p class="fs-4 text-light opacity-70 mb-5">Generate synthetic data on demand.</p>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="https://toinfinity.us14.list-manage.com/subscribe?u=d737c68bb0ef2f563626eb374&id=4724fda571
+                                        " class="btn btn-primary btn-lg w-100 mb-3 mb-sm-0 me-sm-4" target="_blank">Get started for free</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Image -->
+                <div class="position-relative position-lg-absolute top-0 end-0 h-100 order-2 col-lg-8 col-12">
+                    <div class="row h-100 justify-content-end">
+                        <div class="col-xl-10 position-relative">
+                            <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+                            <div class="d-sm-none" style="height: 300px;"></div>
+                            <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-end-0 overflow-hidden" data-jarallax data-speed=".5">
+                                <div class="jarallax-img" style="background-image: url(draft/assets/img/api/api_demo_multipleReps_2.gif);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card -->
+                <!-- <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3 order-1" style="min-height: 80vh;">
+                    <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+                        <div class="col-xl-6 col-lg-7 pb-5">
+
+                            <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
+                                <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                                <div class="card-body position-relative zindex-5">
+                                    <h1 class="display-5 text-light pb-3 mb-3">The Infinity <span class="text-gradient-primary">API</span></h1>
+                                    <p class="fs-4 text-light opacity-70 mb-5">Generate synthetic data on demand.</p>
+                                    <div class="d-flex flex-column flex-sm-row">
+                                        <a href="https://toinfinity.us14.list-manage.com/subscribe?u=d737c68bb0ef2f563626eb374&id=4724fda571
+                                        " class="btn btn-primary btn-lg w-100 mb-3 mb-sm-0 me-sm-4" target="_blank">Get started for free</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Image -->
+                <!-- <div class="position-relative position-lg-absolute top-0 end-0 h-100 order-2 col-lg-8 col-12">
+                    <div class="row h-100 justify-content-end">
+                        <div class="col-xl-10 position-relative">
+                            <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+                            <div class="d-sm-none" style="height: 300px;"></div>
+                            <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-end-0 overflow-hidden" data-jarallax data-speed=".5">
+                                <div class="jarallax-img" style="background-image: url(draft/assets/img/api/api_demo_multipleReps_2.gif);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <br><br><br><br><br><br><br>
+
+        <section class="container">
+            <div class="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
+                <div class="col-lg-8 col-md-9 text-center">
+                    <h2 class="h1 mb-4">Data on demand</h2>
+                    <p class="fs-xl text-muted mb-0">The Infinity API empowers ML engineers to generate the exact data they need at the click of a button. Explore the two fitness products below: VisionFit and SenseFit.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- API sections -->
+        <section class="container pb-2 pb-lg-3 pt-5 mt-5">
+
+
+            <!-- Item -->
+            <div class="row pb-5 mb-5">
+                <div class="col-md-6 order-md-2 pb-1 mb-3 pb-md-0 mb-md-0" data-jarallax-element="-25" data-disable-parallax-down="md">
+                    <a href="portfolio-single-project.html" class="float-md-end">
+                        <img src="draft/assets/img/api/visionfit_teaser_3.gif" class="rounded-3" width="600" alt="Image">
+                    </a>
+                </div>
+                <div class="col-md-6 order-md-1 pt-md-4 py-auto" data-jarallax-element="25" data-disable-parallax-down="md">
+                    <div class="pe-md-4 me-md-2">
+                        <!-- <h2 class="h1 text-reset"><span class="text-gradient-secondary">VisionFit</span> API</h2> -->
+                        <h2 class="h1 text-gradient-secondary">VisionFit</h2>
+                        <h3 class="fs-3 fw-normal opacity-70">Labeled exercise videos</h3>
+                        <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3 fs-lg">The VisionFit API allows users to generate synthetic videos of a variety of exercises. Users choose the number of reps, camera location, environmental conditions, and more. Every video comes with pixel-perfect labels, including
+                            semantic segmentation masks, rep counts, occlusion, and 3D keypoints!</p>
+                        <a href="https://github.com/toinfinityai/infinity-tutorials/tree/main/visionfit" class="btn btn-outline-light" target="_blank">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="row pb-5 mb-md-4 mb-lg-5 mt-5 pt-5">
+                <div class="col-md-6 pb-1 mb-3 pb-md-0 mb-md-0" data-jarallax-element="-25" data-disable-parallax-down="md">
+                    <a href="portfolio-single-project.html">
+                        <img src="draft/assets/img/api/sensefit_teaser.gif" class="rounded-3" width="600" alt="Image">
+                    </a>
+                </div>
+                <div class="col-md-6 py-auto" data-jarallax-element="25" data-disable-parallax-down="md">
+                    <div class="ps-md-4 ms-md-2">
+                        <h2 class="h1 text-gradient-secondary_reverse">SenseFit</h2>
+                        <h3 class="fs-3 fw-normal opacity-70">Labeled wearables data</h3>
+                        <p class="d-md-none d-lg-block pb-3 mb-2 mb-md-3 fs-lg">The SenseFit API allows users to generate time-series wearables data for a variety of exercises. Simulate Apple Watch data or other IMU sensor (angular position) data at any body location. Every dataset comes with continuous rep
+                            count labels and other metadata.</p>
+                        <a href="https://github.com/toinfinityai/infinity-tutorials/tree/main/sensefit" class="btn btn-outline-light" target="_blank">Learn more</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <br><br><br><br>
+
+        <section class="container">
+            <div class="row justify-content-center pt-1 pb-1 mb-2 mb-md-3 mb-lg-4">
+                <div class="col-lg-8 col-md-9 text-center">
+                    <h2 class="h1 mb-4">Get started for free!</h2>
+                    <p class="fs-xl text-muted mb-0">We believe the results speak for themselves. Try out the Infinity API for free with no credit card number required.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- banner -->
+        <section class="container my-5 py-5">
+            <div class="card bg-faded-light shadow-sm px-4 px-lg-0">
+                <div class="row align-items-center py-3">
+                    <div class="col-xl-6 col-md-6 offset-lg-1 text-center text-md-start py-4 py-lg-5">
+                        <h2 class="h1">Ready to start generating data?</h2>
+                        <h5 class="h4 text-primary mb-4 mb-lg-5">Sign up today and start synthesizing your perfect dataset right away.</h5>
+                        <a href="https://github.com/toinfinityai/infinity-tutorials" class="btn btn-outline-light" target="_blank">Read the docs</a>
+                        <a href="https://toinfinity.us14.list-manage.com/subscribe?u=d737c68bb0ef2f563626eb374&id=4724fda571" class="btn btn-primary ms-md-3" target="_blank">Sign up for free</a>
+                    </div>
+                    <div class="col mx-auto">
+                        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_g1YJeb.json" background="transparent" speed="1" style="height: 350px;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer mt-5 pt-5 pb-4 pb-lg-5 border-top border-light">
+        <div class="container text-center pt-lg-3">
+            <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4 mx-0">
+                <img src="draft/assets/img/logo/infinity_full_logo.png" class="me-2" width="300" alt="Infinity AI">
+            </div>
+
+
+            <div class="row text-start justify-content-center gap-5 mt-5">
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Products</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="api" class="font-normal text-dark opacity-80" style="text-decoration: none;">Infinity API</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="infiniterep" class="font-normal text-dark opacity-80" style="text-decoration: none;"><span class="opacity-75">Dataset: </span>InfiniteRep</a>
+                            </li>
+                            <!-- <li class="mb-3 text-xs text-start">
+                                <a href="https://github.com/toinfinityai/infiniteform#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">InfiniteForm</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                </div>
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Resources</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://github.com/toinfinityai" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Documentation</a>
+                            </li>
+                            <li class="mb-3 text-xs text-start">
+                                <a href="https://medium.com/infinity-ai" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">Blog</a>
+                            </li>
+                            <!-- <li class="mb-3 text-xs text-start">
+                              <a href="#" class="font-normal text-dark opacity-80" style="text-decoration: none;">Careers</a>
+                          </li>
+                          <li class="mb-3 text-xs text-start">
+                              <a href="#" target="blank" class="font-normal text-dark opacity-80" style="text-decoration: none;">About us</a>
+                          </li> -->
+                        </ul>
+                    </li>
+                </div>
+
+
+                <div class="col-auto">
+                    <li class="" style="list-style: none; padding-left: 0px;">
+                        <h5 class="opacity-60 fw-medium pb-2">Contact us</h5>
+                        <ul style="list-style: none; padding-left: 0px;">
+                            <li class="mb-3 text-xs text-start">
+                                <a href="mailto:info@toinfinity.ai" class="font-normal text-dark opacity-80" style="text-decoration: none;">info@toinfinity.ai</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+
+            </div>
+
+            <!-- socials -->
+            <div class="d-flex justify-content-center pt-4 mt-lg-3">
+                <a href="https://github.com/toinfinityai" target="_blank" class="btn btn-icon btn-secondary btn-github mx-2">
+                    <i class="bx bxl-github"></i>
+                </a>
+                <a href="https://twitter.com/toinfinityai" target="_blank" class="btn btn-icon btn-secondary btn-twitter mx-2">
+                    <i class="bx bxl-twitter"></i>
+                </a>
+                <a href="https://medium.com/infinity-ai" target="_blank" class="btn btn-icon btn-secondary btn-medium mx-2">
+                    <i class="bx bxl-medium"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/infinityai/" target="_blank" class="btn btn-icon btn-secondary btn-linkedin mx-2">
+                    <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCcp4XyLKD1-1XDWH1lh_njA" target="_blank" class="btn btn-icon btn-secondary btn-youtube mx-2">
+                    <i class="bx bxl-youtube"></i>
+                </a>
+            </div>
+
+
+            <div class="row pt-5 mt-lg-4 justify-content-center">
+                <div class="col-auto">
+                    <p class="fs-sm text-center opacity-80 pb-1">
+                        Made by ML engineers for ML engineers ♥
+                    </p>
+                </div>
+                <div class="col-auto">
+                    <p class="fs-sm text-center opacity-80">
+                        © Infinity AI, Inc. 2022. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="draft/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="draft/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="draft/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="draft/assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="draft/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="draft/assets/vendor/cleave.js/dist/cleave.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="draft/assets/js/theme.min.js"></script>
+</body>
+
+</html>
